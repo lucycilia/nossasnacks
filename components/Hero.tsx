@@ -280,7 +280,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.7 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.9, duration: 0.5, type: "spring" }}
-            style={{ position: "absolute", bottom: "8%", right: "4%", zIndex: 20 }}
+            style={{ position: "absolute", bottom: "calc(8% + 100px)", right: "4%", zIndex: 20 }}
           >
             <motion.div
               data-custom-cursor
