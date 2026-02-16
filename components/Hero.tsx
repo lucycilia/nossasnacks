@@ -71,6 +71,7 @@ export default function Hero() {
           style={{
             background: "#291918",
             padding: "24px 20px 32px",
+            paddingTop: "88px",
             display: "flex",
             flexDirection: "column",
             flex: "0 0 60vh",
