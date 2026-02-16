@@ -86,7 +86,7 @@ export default function Hero() {
             style={{
               fontFamily: "Reigo, system-ui, sans-serif",
               fontWeight: 900,
-              fontSize: "30px",
+              fontSize: "44px",
               color: "#F9EFE1",
               letterSpacing: "0.01em",
             }}
@@ -102,7 +102,7 @@ export default function Hero() {
               className="transition-all duration-300"
               style={{
                 borderRadius: "9999px",
-                padding: "10px 24px",
+                padding: "14px 24px",
                 fontSize: "20px",
                 fontFamily: "'Poppins', system-ui, sans-serif",
                 fontWeight: 500,
