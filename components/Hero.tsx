@@ -220,8 +220,8 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.25 }}
             style={{
               marginTop: "20px",
-              borderRadius: "9999px",
-              padding: isMobile ? "10px 18px" : "12px 28px",
+              borderRadius: isMobile ? "14px" : "9999px",
+              padding: isMobile ? "10px 16px" : "12px 28px",
               background: "rgba(0, 0, 0, 0.3)",
               backdropFilter: "blur(20px)",
               WebkitBackdropFilter: "blur(20px)",
