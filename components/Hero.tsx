@@ -107,7 +107,7 @@ export default function Hero() {
       >
         <motion.div
           animate={{ rotate: 360 }}
-          transition={{ duration: 18, ease: "linear", repeat: Infinity }}
+          transition={{ duration: 28, ease: "linear", repeat: Infinity }}
         >
           <Image
             src="/badge-red.png"
