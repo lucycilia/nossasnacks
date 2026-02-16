@@ -1,7 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+
+const rotatingPhrases = [
+  "Sem culpa.",
+  "Sem glúten.",
+  "Sem lactose.",
+  "100% natural.",
+  "100% vegano.",
+];
 import Image from "next/image";
 
 type Flavor = "cranberry" | "coco";
@@ -13,7 +21,15 @@ const flavorConfig = {
 
 export default function Hero() {
   const [flavor, setFlavor] = useState<Flavor>("cranberry");
+  const [phraseIndex, setPhraseIndex] = useState(0);
   const [email, setEmail] = useState("");
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPhraseIndex((i) => (i + 1) % rotatingPhrases.length);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, []);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
 
@@ -147,8 +163,22 @@ export default function Hero() {
             <span style={{ display: "block", whiteSpace: "nowrap" }}>
               Seu novo snack
             </span>
-            <span style={{ display: "block", whiteSpace: "nowrap" }}>
-              <span style={{ fontWeight: 700 }}>favorito. Sem culpa.</span>
+            <span style={{ display: "flex", alignItems: "baseline", whiteSpace: "nowrap", gap: "0.3em" }}>
+              <span style={{ fontWeight: 700 }}>favorito.</span>
+              <span style={{ display: "inline-block", overflow: "hidden", verticalAlign: "bottom", height: "1.15em", position: "relative", minWidth: "9ch" }}>
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={phraseIndex}
+                    initial={{ opacity: 0, y: "60%" }}
+                    animate={{ opacity: 1, y: "0%" }}
+                    exit={{ opacity: 0, y: "-60%" }}
+                    transition={{ duration: 0.45, ease: "easeInOut" }}
+                    style={{ display: "block", fontWeight: 700, position: "absolute", left: 0, bottom: 0 }}
+                  >
+                    {rotatingPhrases[phraseIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
             </span>
           </motion.h1>
 
