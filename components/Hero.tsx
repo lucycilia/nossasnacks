@@ -329,7 +329,7 @@ export default function Hero() {
                 fontWeight: 400,
               }}
             >
-              Sem spam. Cancele quando quiser. Apenas novidades deliciosas.
+              Sem spam. Apenas novidades deliciosas.
             </p>
           </motion.div>
         </div>
