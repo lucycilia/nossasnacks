@@ -92,9 +92,9 @@ export default function Hero() {
         <Image
           src="/badge-red.png"
           alt="Toooooda natural"
-          width={164}
-          height={164}
-          style={{ width: 164, height: 164, filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }}
+          width={224}
+          height={224}
+          style={{ width: 224, height: 224, filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }}
         />
       </motion.div>
 
