@@ -161,7 +161,7 @@ export default function Hero() {
                 display: "block",
               }}
             >
-              LOTE LIMITADO&nbsp;•&nbsp;JULHO&nbsp;•&nbsp;PRIMEIROS 500 GANHAM DESCONTO
+              JULHO&nbsp;•&nbsp;PRIMEIROS 500 GANHAM DESCONTO
             </span>
           </motion.div>
 
