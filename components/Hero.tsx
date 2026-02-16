@@ -191,7 +191,7 @@ export default function Hero() {
                     style={{
                       background: "#F9EFE1",
                       border: "2px solid #F9EFE1",
-                      color: "#F9EFE1",
+                      color: "#271818",
                       backdropFilter: "blur(8px)",
                       fontFamily: "'Poppins', system-ui, sans-serif",
                       fontWeight: 700,
