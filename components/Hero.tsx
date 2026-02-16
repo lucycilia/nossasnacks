@@ -155,7 +155,7 @@ export default function Hero() {
                 color: "#F9EFE1",
                 fontFamily: "'Poppins', system-ui, sans-serif",
                 fontWeight: 700,
-                fontSize: "11px",
+                fontSize: "14px",
                 letterSpacing: "0.06em",
                 lineHeight: 1.4,
                 display: "block",
