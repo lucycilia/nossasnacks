@@ -70,8 +70,8 @@ export default function Hero() {
         />
       </div>
 
-      {/* ── Header row: logo left, flavor toggle right ─── */}
-      <div className="relative z-10 flex justify-between items-center">
+      {/* ── Header row: logo left ─── */}
+      <div className="relative z-10 flex">
         {/* Nossa logo — top left */}
         <div
           style={{
@@ -93,30 +93,6 @@ export default function Hero() {
           >
             nossa
           </span>
-        </div>
-        <div className="flex" style={{ gap: "8px" }}>
-          {(["cranberry", "coco"] as Flavor[]).map((f) => (
-            <button
-              key={f}
-              onClick={() => setFlavor(f)}
-              className="transition-all duration-300"
-              style={{
-                borderRadius: "9999px",
-                padding: "14px 24px",
-                fontSize: "20px",
-                fontFamily: "'Poppins', system-ui, sans-serif",
-                fontWeight: 500,
-                color: "#F9EFE1",
-                background: flavor === f ? "#D91E29" : "rgba(249,239,225,0.15)",
-                backdropFilter: flavor === f ? undefined : "blur(12px)",
-                WebkitBackdropFilter: flavor === f ? undefined : "blur(12px)",
-                border: "none",
-                cursor: "pointer",
-              }}
-            >
-              {flavorConfig[f].label}
-            </button>
-          ))}
         </div>
       </div>
 
