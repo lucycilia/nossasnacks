@@ -27,7 +27,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setPhraseIndex((i) => (i + 1) % rotatingPhrases.length);
-    }, 3500);
+    }, 2500);
     return () => clearInterval(interval);
   }, []);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
