@@ -71,7 +71,6 @@ export default function Hero() {
           style={{
             background: "#291918",
             padding: "24px 20px 32px",
-            paddingTop: "88px",
             display: "flex",
             flexDirection: "column",
             flex: "0 0 60vh",
@@ -114,7 +113,7 @@ export default function Hero() {
               fontWeight: 300,
               fontSize: "clamp(1.85rem, 7.8vw, 2.3rem)",
               lineHeight: 1.15,
-              marginTop: "24px",
+              marginTop: "88px",
             }}
           >
             <span style={{ display: "block" }}>Seu novo snack</span>
