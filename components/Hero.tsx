@@ -70,8 +70,30 @@ export default function Hero() {
         />
       </div>
 
-      {/* ── Flavor toggle — top right ─── */}
-      <div className="relative z-10 flex justify-end">
+      {/* ── Header row: logo left, flavor toggle right ─── */}
+      <div className="relative z-10 flex justify-between items-center">
+        {/* Nossa logo — top left */}
+        <div
+          style={{
+            borderRadius: "9999px",
+            padding: "16px 32px",
+            background: "rgba(249, 239, 225, 0.1)",
+            backdropFilter: "blur(10px)",
+            WebkitBackdropFilter: "blur(10px)",
+          }}
+        >
+          <span
+            style={{
+              fontFamily: "Reigo, system-ui, sans-serif",
+              fontWeight: 900,
+              fontSize: "30px",
+              color: "#F9EFE1",
+              letterSpacing: "0.01em",
+            }}
+          >
+            nossa
+          </span>
+        </div>
         <div className="flex" style={{ gap: "8px" }}>
           {(["cranberry", "coco"] as Flavor[]).map((f) => (
             <button
