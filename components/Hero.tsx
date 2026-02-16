@@ -269,9 +269,9 @@ export default function Hero() {
             sizes="100vw"
             style={{
               objectFit: "cover",
-              objectPosition: "35% 35%",
+              objectPosition: "75% 35%",
               transform: "scale(1.65)",
-              transformOrigin: "35% 35%",
+              transformOrigin: "75% 35%",
             }}
           />
 
