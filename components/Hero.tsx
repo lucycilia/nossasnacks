@@ -100,18 +100,23 @@ export default function Hero() {
 
       {/* ── Red badge — 300px from top, 104px from right ─── */}
       <motion.div
-        initial={{ opacity: 0, rotate: 15, scale: 0.7 }}
-        animate={{ opacity: 1, rotate: 12, scale: 1 }}
+        initial={{ opacity: 0, scale: 0.7 }}
+        animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.8, duration: 0.5, type: "spring" }}
         style={{ position: "absolute", top: 300, right: 104, zIndex: 20 }}
       >
-        <Image
-          src="/badge-red.png"
-          alt="Toooooda natural"
-          width={224}
-          height={224}
-          style={{ width: 224, height: 224, filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }}
-        />
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ duration: 18, ease: "linear", repeat: Infinity }}
+        >
+          <Image
+            src="/badge-red.png"
+            alt="Toooooda natural"
+            width={224}
+            height={224}
+            style={{ width: 224, height: 224, filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }}
+          />
+        </motion.div>
       </motion.div>
 
       {/* ── Blue badge — fixed page coords: 238px from top, 448px from right ─── */}
