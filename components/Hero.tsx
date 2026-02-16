@@ -222,8 +222,10 @@ export default function Hero() {
               background: "rgba(0, 0, 0, 0.3)",
               backdropFilter: "blur(20px)",
               WebkitBackdropFilter: "blur(20px)",
-              display: "inline-block",
+              display: "inline-flex",
+              width: isMobile ? "100%" : "fit-content",
               maxWidth: "100%",
+              boxSizing: "border-box",
             }}
           >
             <span
