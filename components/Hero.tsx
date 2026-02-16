@@ -76,9 +76,9 @@ export default function Hero() {
           sizes="100vw"
           style={{
             objectFit: "cover",
-            objectPosition: isMobile ? "60% center" : "0% center",
+            objectPosition: isMobile ? "60% 75%" : "0% center",
             transform: "scale(1.1)",
-            transformOrigin: isMobile ? "60% center" : "0% center",
+            transformOrigin: isMobile ? "60% 75%" : "0% center",
           }}
         />
       </div>
@@ -169,7 +169,10 @@ export default function Hero() {
       </p>
 
       {/* ── Main content ─── */}
-      <div className="relative z-10 flex-1 flex flex-col items-start justify-center w-full mt-6 md:mt-0">
+      <div
+        className="relative z-10 flex-1 flex flex-col items-start w-full"
+        style={{ justifyContent: isMobile ? "flex-start" : "center", paddingTop: isMobile ? "32px" : 0, marginTop: isMobile ? 0 : 0 }}
+      >
 
         {/* Left: copy + form */}
         <div className="flex flex-col items-start w-full" style={{ maxWidth: isMobile ? "100%" : "580px" }}>
@@ -183,8 +186,8 @@ export default function Hero() {
               color: "#F9EFE1",
               fontFamily: "Reigo, system-ui, sans-serif",
               fontWeight: 300,
-              fontSize: isMobile ? "clamp(2.4rem, 11vw, 3rem)" : "clamp(3rem, 5vw, 4.5rem)",
-              lineHeight: 1.1,
+              fontSize: isMobile ? "clamp(1.85rem, 7.8vw, 2.3rem)" : "clamp(3rem, 5vw, 4.5rem)",
+              lineHeight: isMobile ? 1.15 : 1.1,
               marginTop: 0,
             }}
           >
