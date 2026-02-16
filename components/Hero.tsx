@@ -191,7 +191,7 @@ export default function Hero() {
             <span style={{ display: "block", whiteSpace: isMobile ? "normal" : "nowrap" }}>
               Seu novo snack
             </span>
-            <span style={{ display: "flex", alignItems: "baseline", flexWrap: "wrap", gap: "0.3em" }}>
+            <span style={{ display: "flex", alignItems: "baseline", flexWrap: "nowrap", gap: "0.3em", whiteSpace: "nowrap" }}>
               <span style={{ fontWeight: 700 }}>favorito.</span>
               <span style={{ display: "inline-grid", minWidth: "9ch" }}>
                 <AnimatePresence mode="wait">
