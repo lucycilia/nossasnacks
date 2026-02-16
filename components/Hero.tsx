@@ -189,7 +189,7 @@ export default function Hero() {
                     required
                     className="flex-1 rounded-full px-5 py-3 outline-none"
                     style={{
-                      background: "rgba(249,239,225,0.1)",
+                      background: "#271818",
                       border: "2px solid #F9EFE1",
                       color: "#F9EFE1",
                       backdropFilter: "blur(8px)",
