@@ -76,7 +76,7 @@ export default function Hero() {
         <div
           style={{
             borderRadius: "9999px",
-            padding: "16px 32px",
+            padding: "0px 24px",
             background: "rgba(249, 239, 225, 0.1)",
             backdropFilter: "blur(10px)",
             WebkitBackdropFilter: "blur(10px)",
