@@ -77,7 +77,7 @@ export default function Hero() {
           style={{
             objectFit: "cover",
             objectPosition: isMobile ? "60% 75%" : "0% center",
-            transform: "scale(1.1)",
+            transform: isMobile ? "scale(0.82)" : "scale(1.1)",
             transformOrigin: isMobile ? "60% 75%" : "0% center",
           }}
         />
