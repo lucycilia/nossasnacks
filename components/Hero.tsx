@@ -128,10 +128,12 @@ export default function Hero() {
             className="mt-16 sm:mt-20 text-5xl sm:text-6xl lg:text-[4.5rem] leading-[1.1]"
             style={{ color: "#F9EFE1", fontFamily: "Reigo, system-ui, sans-serif", fontWeight: 300 }}
           >
-            Seu novo snack{" "}
-            <span style={{ fontWeight: 700 }}>favorito.</span>
-            <br />
-            <span style={{ fontWeight: 700 }}>Sem culpa.</span>
+            <span style={{ display: "block", whiteSpace: "nowrap" }}>
+              Seu novo snack <span style={{ fontWeight: 700 }}>favorito.</span>
+            </span>
+            <span style={{ display: "block", whiteSpace: "nowrap", fontWeight: 700 }}>
+              Sem culpa.
+            </span>
           </motion.h1>
 
           {/* Sub-headline */}
