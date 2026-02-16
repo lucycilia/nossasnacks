@@ -85,24 +85,8 @@ export default function Hero() {
       {/* ── Main content ─── */}
       <div className="relative z-10 flex-1 flex flex-col lg:flex-row items-center justify-between w-full mt-8 lg:mt-0">
 
-        {/* Left: copy + form + badge */}
+        {/* Left: copy + form */}
         <div className="flex flex-col items-start max-w-xl relative">
-
-          {/* Badge: seu snack do bem */}
-          <motion.div
-            initial={{ opacity: 0, rotate: -15, scale: 0.7 }}
-            animate={{ opacity: 1, rotate: -10, scale: 1 }}
-            transition={{ delay: 0.65, duration: 0.5, type: "spring" }}
-            className="absolute -top-6 -left-10 z-20 hidden sm:block"
-          >
-            <Image
-              src="/badge-blue.png"
-              alt="seu snack do bem"
-              width={115}
-              height={115}
-              style={{ filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }}
-            />
-          </motion.div>
 
           {/* Headline */}
           <motion.h1
@@ -220,21 +204,41 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Right: Toooooda natural badge only */}
-        <div className="relative flex items-center justify-center flex-shrink-0" style={{ paddingRight: "64px" }}>
+        {/* Right: badges over cacao pod */}
+        <div className="relative flex items-center justify-center flex-shrink-0" style={{ paddingRight: "64px", minWidth: 280, minHeight: 320 }}>
+
+          {/* "seu snack do bem" — sticker on the upper-left of the cacao pod */}
+          <motion.div
+            initial={{ opacity: 0, rotate: -15, scale: 0.7 }}
+            animate={{ opacity: 1, rotate: -10, scale: 1 }}
+            transition={{ delay: 0.65, duration: 0.5, type: "spring" }}
+            style={{ position: "absolute", top: "10%", left: "0%" }}
+          >
+            <Image
+              src="/badge-blue.png"
+              alt="seu snack do bem"
+              width={115}
+              height={115}
+              style={{ filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }}
+            />
+          </motion.div>
+
+          {/* "Toooooda natural" — lower-right of the pod */}
           <motion.div
             initial={{ opacity: 0, rotate: 15, scale: 0.7 }}
             animate={{ opacity: 1, rotate: 12, scale: 1 }}
             transition={{ delay: 0.8, duration: 0.5, type: "spring" }}
+            style={{ position: "absolute", bottom: "15%", right: "0%" }}
           >
             <Image
               src="/badge-red.png"
               alt="Toooooda natural"
-              width={160}
-              height={160}
+              width={140}
+              height={140}
               style={{ filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }}
             />
           </motion.div>
+
         </div>
 
       </div>
