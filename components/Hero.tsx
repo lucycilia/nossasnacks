@@ -114,6 +114,22 @@ export default function Hero() {
         />
       </motion.div>
 
+      {/* ── Bottom-left tag ─── */}
+      <p
+        style={{
+          position: "absolute",
+          bottom: 40,
+          left: 48,
+          zIndex: 10,
+          color: "#F9EFE1",
+          fontFamily: "'Poppins', system-ui, sans-serif",
+          fontWeight: 400,
+          fontSize: "14px",
+        }}
+      >
+        Feito no Brasil com amor ❤️
+      </p>
+
       {/* ── Main content ─── */}
       <div className="relative z-10 flex-1 flex flex-col lg:flex-row items-center justify-between w-full mt-8 lg:mt-0">
 
