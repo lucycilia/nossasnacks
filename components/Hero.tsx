@@ -82,6 +82,22 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* ── Blue badge — fixed page coords: 238px from top, 448px from right ─── */}
+      <motion.div
+        initial={{ opacity: 0, rotate: -15, scale: 0.7 }}
+        animate={{ opacity: 1, rotate: -10, scale: 1 }}
+        transition={{ delay: 0.65, duration: 0.5, type: "spring" }}
+        style={{ position: "absolute", top: 238, right: 448, zIndex: 20 }}
+      >
+        <Image
+          src="/badge-blue.png"
+          alt="seu snack do bem"
+          width={240}
+          height={240}
+          style={{ filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }}
+        />
+      </motion.div>
+
       {/* ── Main content ─── */}
       <div className="relative z-10 flex-1 flex flex-col lg:flex-row items-center justify-between w-full mt-8 lg:mt-0">
 
@@ -206,22 +222,6 @@ export default function Hero() {
 
         {/* Right: badges over cacao pod */}
         <div className="relative flex items-center justify-center flex-shrink-0" style={{ paddingRight: "64px", minWidth: 280, minHeight: 320 }}>
-
-          {/* "seu snack do bem" — sticker on the upper-left of the cacao pod */}
-          <motion.div
-            initial={{ opacity: 0, rotate: -15, scale: 0.7 }}
-            animate={{ opacity: 1, rotate: -10, scale: 1 }}
-            transition={{ delay: 0.65, duration: 0.5, type: "spring" }}
-            style={{ position: "absolute", top: "10%", left: "0%" }}
-          >
-            <Image
-              src="/badge-blue.png"
-              alt="seu snack do bem"
-              width={240}
-              height={240}
-              style={{ filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }}
-            />
-          </motion.div>
 
           {/* "Toooooda natural" — lower-right of the pod */}
           <motion.div
