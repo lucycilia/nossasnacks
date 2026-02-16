@@ -207,6 +207,7 @@ export default function Hero() {
                 fontWeight: 700,
                 fontSize: "16px",
                 letterSpacing: "0.1em",
+                whiteSpace: "nowrap",
               }}
             >
               LOTE LIMITADO&nbsp;•&nbsp;JULHO&nbsp;•&nbsp;PRIMEIROS 500 GANHAM DESCONTO
