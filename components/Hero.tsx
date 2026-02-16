@@ -73,7 +73,9 @@ export default function Hero() {
             padding: "24px 20px 32px",
             display: "flex",
             flexDirection: "column",
-            flex: "0 0 auto",
+            flex: "0 0 60vh",
+            minHeight: 0,
+            overflowY: "auto",
           }}
         >
           {/* Nossa logo */}
@@ -253,9 +255,8 @@ export default function Hero() {
         {/* Section 2 — product image */}
         <div
           style={{
-            flex: 1,
+            flex: "0 0 40vh",
             position: "relative",
-            minHeight: "38vh",
             overflow: "hidden",
             background: "#1a0f0e",
           }}
@@ -268,7 +269,9 @@ export default function Hero() {
             sizes="100vw"
             style={{
               objectFit: "cover",
-              objectPosition: "55% 30%",
+              objectPosition: "55% 35%",
+              transform: "scale(1.45)",
+              transformOrigin: "55% 35%",
             }}
           />
 
