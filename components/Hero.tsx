@@ -82,6 +82,22 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* ── Red badge — 300px from top, 104px from right ─── */}
+      <motion.div
+        initial={{ opacity: 0, rotate: 15, scale: 0.7 }}
+        animate={{ opacity: 1, rotate: 12, scale: 1 }}
+        transition={{ delay: 0.8, duration: 0.5, type: "spring" }}
+        style={{ position: "absolute", top: 300, right: 104, zIndex: 20 }}
+      >
+        <Image
+          src="/badge-red.png"
+          alt="Toooooda natural"
+          width={140}
+          height={140}
+          style={{ filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }}
+        />
+      </motion.div>
+
       {/* ── Blue badge — fixed page coords: 238px from top, 448px from right ─── */}
       <motion.div
         initial={{ opacity: 0, rotate: -15, scale: 0.7 }}
@@ -220,26 +236,8 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Right: badges over cacao pod */}
-        <div className="relative flex items-center justify-center flex-shrink-0" style={{ paddingRight: "64px", minWidth: 280, minHeight: 320 }}>
-
-          {/* "Toooooda natural" — lower-right of the pod */}
-          <motion.div
-            initial={{ opacity: 0, rotate: 15, scale: 0.7 }}
-            animate={{ opacity: 1, rotate: 12, scale: 1 }}
-            transition={{ delay: 0.8, duration: 0.5, type: "spring" }}
-            style={{ position: "absolute", bottom: "15%", right: "0%" }}
-          >
-            <Image
-              src="/badge-red.png"
-              alt="Toooooda natural"
-              width={140}
-              height={140}
-              style={{ filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }}
-            />
-          </motion.div>
-
-        </div>
+        {/* Right: empty spacer to keep layout balanced */}
+        <div className="flex-shrink-0" style={{ minWidth: 64 }} />
 
       </div>
     </section>
