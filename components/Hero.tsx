@@ -27,7 +27,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setPhraseIndex((i) => (i + 1) % rotatingPhrases.length);
-    }, 3500);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -169,10 +169,10 @@ export default function Hero() {
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={phraseIndex}
-                    initial={{ opacity: 0, y: "40%" }}
+                    initial={{ opacity: 1, y: "100%" }}
                     animate={{ opacity: 1, y: "0%" }}
-                    exit={{ opacity: 0, y: "-40%" }}
-                    transition={{ duration: 0.45, ease: "easeInOut" }}
+                    exit={{ opacity: 1, y: "-100%" }}
+                    transition={{ duration: 0.4, ease: [0.4, 0.0, 0.2, 1] }}
                     style={{ display: "block", fontWeight: 700, gridArea: "1 / 1" }}
                   >
                     {rotatingPhrases[phraseIndex]}
