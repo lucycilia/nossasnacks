@@ -189,9 +189,9 @@ export default function Hero() {
                     required
                     className="flex-1 rounded-full px-5 py-3 outline-none"
                     style={{
-                      background: "#F9EFE1",
+                      background: "#271818",
                       border: "2px solid #F9EFE1",
-                      color: "#271818",
+                      color: "#F9EFE1",
                       backdropFilter: "blur(8px)",
                       fontFamily: "'Poppins', system-ui, sans-serif",
                       fontWeight: 700,
