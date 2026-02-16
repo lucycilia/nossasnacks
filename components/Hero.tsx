@@ -205,7 +205,7 @@ export default function Hero() {
                     whileTap={{ scale: 0.97 }}
                     className="rounded-full px-7 py-3 text-white whitespace-nowrap disabled:opacity-60"
                     style={{
-                      background: "#D91E29",
+                      background: "#92F4E5",
                       fontFamily: "'Poppins', system-ui, sans-serif",
                       fontWeight: 600,
                       fontSize: "16px",
