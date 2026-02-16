@@ -23,6 +23,14 @@ export default function Hero() {
   const [flavor, setFlavor] = useState<Flavor>("cranberry");
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [email, setEmail] = useState("");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -56,7 +64,7 @@ export default function Hero() {
   return (
     <section
       className="relative min-h-screen flex flex-col overflow-hidden"
-      style={{ padding: "48px" }}
+      style={{ padding: isMobile ? "24px 20px" : "48px" }}
     >
       {/* ── Background image ─── */}
       <div className="absolute inset-0 z-0">
@@ -66,7 +74,12 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          style={{ objectFit: "cover", objectPosition: "0% center", transform: "scale(1.1)", transformOrigin: "0% center" }}
+          style={{
+            objectFit: "cover",
+            objectPosition: isMobile ? "60% center" : "0% center",
+            transform: "scale(1.1)",
+            transformOrigin: isMobile ? "60% center" : "0% center",
+          }}
         />
       </div>
 
@@ -76,7 +89,7 @@ export default function Hero() {
         <div
           style={{
             borderRadius: "9999px",
-            padding: "0px 24px",
+            padding: isMobile ? "0px 16px" : "0px 24px",
             background: "rgba(0, 0, 0, 0.3)",
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
@@ -86,7 +99,7 @@ export default function Hero() {
             style={{
               fontFamily: "Reigo, system-ui, sans-serif",
               fontWeight: 900,
-              fontSize: "44px",
+              fontSize: isMobile ? "32px" : "44px",
               color: "#F9EFE1",
               letterSpacing: "0.01em",
             }}
@@ -96,77 +109,87 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ── Red badge — 300px from top, 104px from right ─── */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.7 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.8, duration: 0.5, type: "spring" }}
-        style={{ position: "absolute", top: 300, right: 104, zIndex: 20 }}
-      >
+      {/* ── Red badge ─── */}
+      {!isMobile && (
         <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 28, ease: "linear", repeat: Infinity }}
+          initial={{ opacity: 0, scale: 0.7 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.8, duration: 0.5, type: "spring" }}
+          style={{ position: "absolute", top: 300, right: 104, zIndex: 20 }}
+        >
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 28, ease: "linear", repeat: Infinity }}
+          >
+            <Image
+              src="/badge-red.png"
+              alt="Toooooda natural"
+              width={224}
+              height={224}
+              style={{ width: 224, height: 224, filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }}
+            />
+          </motion.div>
+        </motion.div>
+      )}
+
+      {/* ── Blue badge ─── */}
+      {!isMobile && (
+        <motion.div
+          initial={{ opacity: 0, rotate: -15, scale: 0.7 }}
+          animate={{ opacity: 1, rotate: -10, scale: 1 }}
+          transition={{ delay: 0.65, duration: 0.5, type: "spring" }}
+          style={{ position: "absolute", top: 238, right: 448, zIndex: 20 }}
         >
           <Image
-            src="/badge-red.png"
-            alt="Toooooda natural"
-            width={224}
-            height={224}
-            style={{ width: 224, height: 224, filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }}
+            src="/badge-blue.png"
+            alt="seu snack do bem"
+            width={240}
+            height={240}
+            style={{ filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }}
           />
         </motion.div>
-      </motion.div>
-
-      {/* ── Blue badge — fixed page coords: 238px from top, 448px from right ─── */}
-      <motion.div
-        initial={{ opacity: 0, rotate: -15, scale: 0.7 }}
-        animate={{ opacity: 1, rotate: -10, scale: 1 }}
-        transition={{ delay: 0.65, duration: 0.5, type: "spring" }}
-        style={{ position: "absolute", top: 238, right: 448, zIndex: 20 }}
-      >
-        <Image
-          src="/badge-blue.png"
-          alt="seu snack do bem"
-          width={240}
-          height={240}
-          style={{ filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }}
-        />
-      </motion.div>
+      )}
 
       {/* ── Bottom-left tag ─── */}
       <p
         style={{
           position: "absolute",
-          bottom: 40,
-          left: 48,
+          bottom: isMobile ? 24 : 40,
+          left: isMobile ? 20 : 48,
           zIndex: 10,
           color: "#F9EFE1",
           fontFamily: "'Poppins', system-ui, sans-serif",
           fontWeight: 400,
-          fontSize: "14px",
+          fontSize: isMobile ? "12px" : "14px",
         }}
       >
         Feito no Brasil com amor ❤️
       </p>
 
       {/* ── Main content ─── */}
-      <div className="relative z-10 flex-1 flex flex-col lg:flex-row items-center justify-between w-full mt-8 lg:mt-0">
+      <div className="relative z-10 flex-1 flex flex-col items-start justify-center w-full mt-6 md:mt-0">
 
         {/* Left: copy + form */}
-        <div className="flex flex-col items-start max-w-xl relative">
+        <div className="flex flex-col items-start w-full" style={{ maxWidth: isMobile ? "100%" : "580px" }}>
 
           {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mt-0 sm:mt-4 text-5xl sm:text-6xl lg:text-[4.5rem] leading-[1.1]"
-            style={{ color: "#F9EFE1", fontFamily: "Reigo, system-ui, sans-serif", fontWeight: 300 }}
+            style={{
+              color: "#F9EFE1",
+              fontFamily: "Reigo, system-ui, sans-serif",
+              fontWeight: 300,
+              fontSize: isMobile ? "clamp(2.4rem, 11vw, 3rem)" : "clamp(3rem, 5vw, 4.5rem)",
+              lineHeight: 1.1,
+              marginTop: 0,
+            }}
           >
-            <span style={{ display: "block", whiteSpace: "nowrap" }}>
+            <span style={{ display: "block", whiteSpace: isMobile ? "normal" : "nowrap" }}>
               Seu novo snack
             </span>
-            <span style={{ display: "flex", alignItems: "baseline", whiteSpace: "nowrap", gap: "0.3em" }}>
+            <span style={{ display: "flex", alignItems: "baseline", flexWrap: "wrap", gap: "0.3em" }}>
               <span style={{ fontWeight: 700 }}>favorito.</span>
               <span style={{ display: "inline-grid", minWidth: "9ch" }}>
                 <AnimatePresence mode="wait">
@@ -193,11 +216,12 @@ export default function Hero() {
             style={{
               marginTop: "20px",
               borderRadius: "9999px",
-              padding: "12px 28px",
+              padding: isMobile ? "10px 18px" : "12px 28px",
               background: "rgba(0, 0, 0, 0.3)",
               backdropFilter: "blur(20px)",
               WebkitBackdropFilter: "blur(20px)",
               display: "inline-block",
+              maxWidth: "100%",
             }}
           >
             <span
@@ -205,9 +229,11 @@ export default function Hero() {
                 color: "#F9EFE1",
                 fontFamily: "'Poppins', system-ui, sans-serif",
                 fontWeight: 700,
-                fontSize: "16px",
-                letterSpacing: "0.1em",
-                whiteSpace: "nowrap",
+                fontSize: isMobile ? "11px" : "16px",
+                letterSpacing: isMobile ? "0.06em" : "0.1em",
+                whiteSpace: isMobile ? "normal" : "nowrap",
+                lineHeight: 1.4,
+                display: "block",
               }}
             >
               LOTE LIMITADO&nbsp;•&nbsp;JULHO&nbsp;•&nbsp;PRIMEIROS 500 GANHAM DESCONTO
@@ -299,9 +325,6 @@ export default function Hero() {
             </p>
           </motion.div>
         </div>
-
-        {/* Right: empty spacer to keep layout balanced */}
-        <div className="flex-shrink-0" style={{ minWidth: 64 }} />
 
       </div>
     </section>
