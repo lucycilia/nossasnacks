@@ -112,7 +112,7 @@ export default function Hero() {
               fontWeight: 300,
               fontSize: "clamp(1.85rem, 7.8vw, 2.3rem)",
               lineHeight: 1.15,
-              marginTop: "88px",
+              marginTop: "44px",
             }}
           >
             <span style={{ display: "block" }}>Seu novo snack</span>
