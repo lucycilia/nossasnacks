@@ -129,10 +129,10 @@ export default function Hero() {
             style={{ color: "#F9EFE1", fontFamily: "Reigo, system-ui, sans-serif", fontWeight: 300 }}
           >
             <span style={{ display: "block", whiteSpace: "nowrap" }}>
-              Seu novo snack <span style={{ fontWeight: 700 }}>favorito.</span>
+              Seu novo snack
             </span>
-            <span style={{ display: "block", whiteSpace: "nowrap", fontWeight: 700 }}>
-              Sem culpa.
+            <span style={{ display: "block", whiteSpace: "nowrap" }}>
+              <span style={{ fontWeight: 700 }}>favorito. Sem culpa.</span>
             </span>
           </motion.h1>
 
