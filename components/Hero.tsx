@@ -94,7 +94,7 @@ export default function Hero() {
           alt="Toooooda natural"
           width={140}
           height={140}
-          style={{ filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }}
+          style={{ width: 140, height: 140, filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))" }}
         />
       </motion.div>
 
