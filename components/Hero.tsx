@@ -75,7 +75,6 @@ export default function Hero() {
             flexDirection: "column",
             flex: "0 0 60vh",
             minHeight: 0,
-            overflowY: "auto",
           }}
         >
           {/* Nossa logo */}
