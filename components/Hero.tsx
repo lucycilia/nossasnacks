@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const rotatingPhrases = [
   "Sem culpa.",
@@ -10,7 +11,6 @@ const rotatingPhrases = [
   "100% natural.",
   "100% vegano.",
 ];
-import Image from "next/image";
 
 type Flavor = "cranberry" | "coco";
 
@@ -165,15 +165,15 @@ export default function Hero() {
             </span>
             <span style={{ display: "flex", alignItems: "baseline", whiteSpace: "nowrap", gap: "0.3em" }}>
               <span style={{ fontWeight: 700 }}>favorito.</span>
-              <span style={{ display: "inline-block", overflow: "hidden", verticalAlign: "bottom", height: "1.15em", position: "relative", minWidth: "9ch" }}>
+              <span style={{ display: "inline-grid", minWidth: "9ch" }}>
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={phraseIndex}
-                    initial={{ opacity: 0, y: "60%" }}
+                    initial={{ opacity: 0, y: "40%" }}
                     animate={{ opacity: 1, y: "0%" }}
-                    exit={{ opacity: 0, y: "-60%" }}
+                    exit={{ opacity: 0, y: "-40%" }}
                     transition={{ duration: 0.45, ease: "easeInOut" }}
-                    style={{ display: "block", fontWeight: 700, position: "absolute", left: 0, bottom: 0 }}
+                    style={{ display: "block", fontWeight: 700, gridArea: "1 / 1" }}
                   >
                     {rotatingPhrases[phraseIndex]}
                   </motion.span>
