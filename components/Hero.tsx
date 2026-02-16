@@ -73,7 +73,7 @@ export default function Hero() {
             padding: "24px 20px 32px",
             display: "flex",
             flexDirection: "column",
-            flex: "0 0 60vh",
+            flex: "0 0 50vh",
             minHeight: 0,
           }}
         >
@@ -254,7 +254,7 @@ export default function Hero() {
         {/* Section 2 — product image */}
         <div
           style={{
-            flex: "0 0 40vh",
+            flex: "0 0 50vh",
             position: "relative",
             overflow: "hidden",
             background: "#1a0f0e",
