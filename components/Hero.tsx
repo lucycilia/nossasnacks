@@ -524,7 +524,6 @@ export default function Hero() {
               WebkitBackdropFilter: "blur(20px)",
               display: "inline-flex",
               width: "fit-content",
-              maxWidth: "100%",
               boxSizing: "border-box",
             }}
           >
