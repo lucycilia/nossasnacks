@@ -9,14 +9,12 @@ type Flavor = "cranberry" | "coco";
 const flavorConfig = {
   cranberry: {
     label: "Cranberry",
-    barColor: "#8B1A1A",
-    accentColor: "#C0392B",
+    accentColor: "#D91E29",
     tagline: "Cranberry & Chocolate",
     barGradient: ["#6B1414", "#A52525", "#6B1414"],
   },
   coco: {
     label: "Coco",
-    barColor: "#4A3728",
     accentColor: "#D4A853",
     tagline: "Coco & Chocolate",
     barGradient: ["#3D2E22", "#6B5040", "#3D2E22"],
@@ -52,8 +50,11 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden">
-      {/* ── Background image + overlay ─── */}
+    <section
+      className="relative min-h-screen flex flex-col overflow-hidden"
+      style={{ padding: "48px" }}
+    >
+      {/* ── Background image — no overlay ─── */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/hero-bg.png"
@@ -61,34 +62,33 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          style={{ objectFit: "cover", objectPosition: "center" }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(135deg, rgba(15,6,2,0.85) 0%, rgba(26,14,6,0.72) 50%, rgba(15,6,2,0.55) 100%)",
-          }}
+          style={{ objectFit: "cover", objectPosition: "60% center" }}
         />
       </div>
 
       {/* ── Flavor toggle — top right ─── */}
-      <div className="relative z-10 flex justify-end px-6 pt-6">
-        <div
-          className="flex rounded-full overflow-hidden"
-          style={{ border: "1.5px solid rgba(253,246,236,0.3)" }}
-        >
-          {(["cranberry", "coco"] as Flavor[]).map((f, i) => (
+      <div className="relative z-10 flex justify-end">
+        <div className="flex" style={{ gap: "8px" }}>
+          {(["cranberry", "coco"] as Flavor[]).map((f) => (
             <button
               key={f}
               onClick={() => setFlavor(f)}
-              className="px-4 py-1.5 text-sm transition-all duration-300"
+              className="transition-all duration-300"
               style={{
-                background: flavor === f ? "#C0392B" : "rgba(0,0,0,0.35)",
-                color: flavor === f ? "#fff" : "rgba(253,246,236,0.65)",
-                fontFamily: "Reigo, system-ui, sans-serif",
-                fontWeight: flavor === f ? 600 : 300,
-                borderRight: i === 0 ? "1px solid rgba(253,246,236,0.2)" : undefined,
+                borderRadius: "9999px",
+                padding: "10px 24px",
+                fontSize: "20px",
+                fontFamily: "'Poppins', system-ui, sans-serif",
+                fontWeight: 500,
+                color: "#F9EFE1",
+                background:
+                  flavor === f
+                    ? "#D91E29"
+                    : "rgba(249,239,225,0.15)",
+                backdropFilter: flavor === f ? undefined : "blur(12px)",
+                WebkitBackdropFilter: flavor === f ? undefined : "blur(12px)",
+                border: "none",
+                cursor: "pointer",
               }}
             >
               {flavorConfig[f].label}
@@ -98,17 +98,17 @@ export default function Hero() {
       </div>
 
       {/* ── Main content ─── */}
-      <div className="relative z-10 flex-1 flex flex-col lg:flex-row items-center justify-center px-6 lg:px-16 py-8 gap-10 lg:gap-20 max-w-7xl mx-auto w-full">
+      <div className="relative z-10 flex-1 flex flex-col lg:flex-row items-center justify-between w-full mt-8 lg:mt-0">
 
         {/* Left: copy + form + badge */}
-        <div className="flex-1 flex flex-col items-start max-w-lg relative">
+        <div className="flex flex-col items-start max-w-xl relative">
 
-          {/* Badge: seu snack do bem — top-left of this column */}
+          {/* Badge: seu snack do bem */}
           <motion.div
             initial={{ opacity: 0, rotate: -15, scale: 0.7 }}
             animate={{ opacity: 1, rotate: -10, scale: 1 }}
             transition={{ delay: 0.65, duration: 0.5, type: "spring" }}
-            className="absolute -top-6 -left-8 z-20 hidden sm:block"
+            className="absolute -top-6 -left-10 z-20 hidden sm:block"
           >
             <Image
               src="/badge-blue.png"
@@ -124,21 +124,17 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mt-16 sm:mt-24 text-5xl sm:text-6xl lg:text-[4.5rem] leading-[1.1]"
-            style={{ color: "#FDF6EC", fontFamily: "Reigo, system-ui, sans-serif", fontWeight: 300 }}
+            className="mt-16 sm:mt-20 text-5xl sm:text-6xl lg:text-[4.5rem] leading-[1.1]"
+            style={{
+              color: "#F9EFE1",
+              fontFamily: "Reigo, system-ui, sans-serif",
+              fontWeight: 300,
+            }}
           >
             Seu novo snack{" "}
             <span style={{ fontWeight: 700 }}>favorito.</span>
             <br />
-            <span
-              style={{
-                fontWeight: 700,
-                color: config.accentColor,
-                transition: "color 0.5s ease",
-              }}
-            >
-              Sem culpa.
-            </span>
+            <span style={{ fontWeight: 700 }}>Sem culpa.</span>
           </motion.h1>
 
           {/* Sub-headline */}
@@ -146,8 +142,14 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="mt-5 text-base sm:text-lg"
-            style={{ color: "#C9A97A", fontWeight: 300 }}
+            style={{
+              color: "#F9EFE1",
+              fontFamily: "'Poppins', system-ui, sans-serif",
+              fontWeight: 700,
+              fontStyle: "italic",
+              fontSize: "16px",
+              marginTop: "20px",
+            }}
           >
             Lançamento Julho 2026 &nbsp;•&nbsp; Primeiros 500 ganham desconto
           </motion.p>
@@ -157,7 +159,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.42 }}
-            className="mt-8 w-full"
+            style={{ marginTop: "32px", width: "100%" }}
           >
             <AnimatePresence mode="wait">
               {status === "success" ? (
@@ -165,8 +167,12 @@ export default function Hero() {
                   key="success"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="text-lg"
-                  style={{ color: "#C9A97A", fontWeight: 400 }}
+                  style={{
+                    color: "#F9EFE1",
+                    fontFamily: "'Poppins', system-ui, sans-serif",
+                    fontWeight: 400,
+                    fontSize: "18px",
+                  }}
                 >
                   {message}
                 </motion.p>
@@ -178,18 +184,19 @@ export default function Hero() {
                 >
                   <input
                     type="email"
-                    placeholder="Seu melhor e-mail"
+                    placeholder="Digite seu e-mail"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="flex-1 rounded-full px-5 py-3 text-sm outline-none"
+                    className="flex-1 rounded-full px-5 py-3 outline-none"
                     style={{
-                      background: "rgba(253,246,236,0.1)",
-                      border: "1.5px solid rgba(253,246,236,0.3)",
-                      color: "#FDF6EC",
+                      background: "rgba(249,239,225,0.1)",
+                      border: "2px solid #F9EFE1",
+                      color: "#F9EFE1",
                       backdropFilter: "blur(8px)",
-                      fontFamily: "Reigo, system-ui, sans-serif",
-                      fontWeight: 300,
+                      fontFamily: "'Poppins', system-ui, sans-serif",
+                      fontWeight: 700,
+                      fontSize: "16px",
                     }}
                   />
                   <motion.button
@@ -197,12 +204,12 @@ export default function Hero() {
                     disabled={status === "loading"}
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 0.97 }}
-                    className="rounded-full px-7 py-3 text-sm font-semibold text-white whitespace-nowrap disabled:opacity-60"
+                    className="rounded-full px-7 py-3 text-white whitespace-nowrap disabled:opacity-60"
                     style={{
-                      background: config.accentColor,
-                      fontFamily: "Reigo, system-ui, sans-serif",
+                      background: "#D91E29",
+                      fontFamily: "'Poppins', system-ui, sans-serif",
                       fontWeight: 600,
-                      transition: "background 0.4s ease",
+                      fontSize: "16px",
                     }}
                   >
                     {status === "loading" ? "Enviando…" : "Eu quero!"}
@@ -212,27 +219,45 @@ export default function Hero() {
             </AnimatePresence>
 
             {status === "error" && (
-              <p className="mt-2 text-sm" style={{ color: "#e87a6a" }}>{message}</p>
+              <p
+                style={{
+                  marginTop: "8px",
+                  fontSize: "14px",
+                  color: "#e87a6a",
+                  fontFamily: "'Poppins', system-ui, sans-serif",
+                }}
+              >
+                {message}
+              </p>
             )}
 
             <p
-              className="mt-2 text-xs"
-              style={{ color: "rgba(201,169,122,0.65)", fontStyle: "italic" }}
+              style={{
+                marginTop: "8px",
+                fontSize: "13px",
+                color: "rgba(249,239,225,0.7)",
+                fontStyle: "italic",
+                fontFamily: "'Poppins', system-ui, sans-serif",
+                fontWeight: 400,
+              }}
             >
-              Sem spam. Só amor. 🤍
+              Sem spam. Cancele quando quiser. Apenas novidades deliciosas.
             </p>
           </motion.div>
         </div>
 
-        {/* Right: snack bar + badge */}
-        <div className="relative flex items-center justify-center w-full lg:w-auto">
-
+        {/* Right: snack bar + badge — 64px from right edge */}
+        <div
+          className="relative flex items-center justify-center flex-shrink-0"
+          style={{ paddingRight: "64px" }}
+        >
           {/* Badge: Toooooda natural */}
           <motion.div
             initial={{ opacity: 0, rotate: 15, scale: 0.7 }}
             animate={{ opacity: 1, rotate: 12, scale: 1 }}
             transition={{ delay: 0.8, duration: 0.5, type: "spring" }}
-            className="absolute -top-4 -right-2 lg:-right-6 z-20"
+            className="absolute -top-4 -right-2 z-20"
+            style={{ right: "60px" }}
           >
             <Image
               src="/badge-red.png"
@@ -284,7 +309,7 @@ function SnackBarIllustration({
   config: (typeof flavorConfig)[Flavor];
 }) {
   const isCoco = flavor === "coco";
-  const uid = flavor; // unique gradient id per flavor
+  const uid = flavor;
 
   return (
     <svg
@@ -315,29 +340,18 @@ function SnackBarIllustration({
         </clipPath>
       </defs>
 
-      {/* Wrapper body */}
       <rect x="30" y="20" width="200" height="360" rx="24" fill={`url(#kraft-${uid})`} />
-
-      {/* Crinkle texture lines */}
       <line x1="30" y1="100" x2="230" y2="100" stroke="rgba(0,0,0,0.12)" strokeWidth="1" />
       <line x1="30" y1="300" x2="230" y2="300" stroke="rgba(0,0,0,0.12)" strokeWidth="1" />
       <path d="M30 104 Q80 109 130 104 Q180 99 230 104" stroke="rgba(255,255,255,0.07)" strokeWidth="1" fill="none" />
       <path d="M30 296 Q80 291 130 296 Q180 301 230 296" stroke="rgba(255,255,255,0.07)" strokeWidth="1" fill="none" />
-
-      {/* Seal folds */}
       <path d="M30 20 Q130 42 230 20 L230 46 Q130 62 30 46 Z" fill="rgba(0,0,0,0.2)" />
       <path d="M30 380 Q130 358 230 380 L230 354 Q130 338 30 354 Z" fill="rgba(0,0,0,0.2)" />
-
-      {/* Label area */}
       <rect x="46" y="112" width="168" height="176" rx="12" fill="#FDF6EC" />
-
-      {/* Brand */}
       <text x="130" y="148" textAnchor="middle" fontFamily="Reigo, system-ui, sans-serif" fontWeight="700" fontSize="17" fill="#2C1A0E" letterSpacing="0.8">
         Nossa Snacks
       </text>
       <line x1="58" y1="155" x2="202" y2="155" stroke={config.accentColor} strokeWidth="1.5" />
-
-      {/* Bar illustration */}
       <rect x="58" y="163" width="144" height="70" rx="10" fill={`url(#bar-${uid})`} />
 
       {isCoco ? (
@@ -357,21 +371,15 @@ function SnackBarIllustration({
         </>
       )}
 
-      {/* Flavor name */}
       <text x="130" y="253" textAnchor="middle" fontFamily="Reigo, system-ui, sans-serif" fontWeight="600" fontSize="13" fill="#2C1A0E">
         {config.tagline}
       </text>
-
-      {/* Natural tag */}
       <rect x="74" y="261" width="112" height="20" rx="10" fill={config.accentColor} />
       <text x="130" y="275" textAnchor="middle" fontFamily="Reigo, system-ui, sans-serif" fontWeight="600" fontSize="10" fill="#fff" letterSpacing="0.5">
         100% Natural
       </text>
-
-      {/* Shine */}
       <rect x="30" y="20" width="200" height="360" rx="24" fill={`url(#shine-${uid})`} clipPath={`url(#clip-${uid})`} />
 
-      {/* Decorative dots */}
       {isCoco ? (
         <>
           <circle cx="16" cy="155" r="9" fill="rgba(212,168,83,0.65)" />
