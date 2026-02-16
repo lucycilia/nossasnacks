@@ -380,20 +380,6 @@ function SnackBarIllustration({
       </text>
       <rect x="30" y="20" width="200" height="360" rx="24" fill={`url(#shine-${uid})`} clipPath={`url(#clip-${uid})`} />
 
-      {isCoco ? (
-        <>
-          <circle cx="16" cy="155" r="9" fill="rgba(212,168,83,0.65)" />
-          <circle cx="246" cy="198" r="7" fill="rgba(212,168,83,0.55)" />
-          <circle cx="20" cy="278" r="5" fill="rgba(212,168,83,0.45)" />
-        </>
-      ) : (
-        <>
-          <circle cx="14" cy="152" r="10" fill="rgba(192,57,43,0.72)" />
-          <circle cx="248" cy="198" r="7" fill="rgba(192,57,43,0.62)" />
-          <circle cx="18" cy="276" r="6" fill="rgba(192,57,43,0.52)" />
-          <circle cx="242" cy="308" r="5" fill="rgba(192,57,43,0.45)" />
-        </>
-      )}
     </svg>
   );
 }
