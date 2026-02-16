@@ -118,6 +118,7 @@ export default function Hero() {
           style={{ position: "absolute", top: 300, right: 104, zIndex: 20 }}
         >
           <motion.div
+            data-custom-cursor
             animate={{ rotate: 360 }}
             transition={{ duration: 28, ease: "linear", repeat: Infinity }}
           >
@@ -135,6 +136,7 @@ export default function Hero() {
       {/* ── Blue badge ─── */}
       {!isMobile && (
         <motion.div
+          data-custom-cursor
           initial={{ opacity: 0, rotate: -15, scale: 0.7 }}
           animate={{ opacity: 1, rotate: -10, scale: 1 }}
           transition={{ delay: 0.65, duration: 0.5, type: "spring" }}
@@ -287,6 +289,7 @@ export default function Hero() {
                   />
                   <motion.button
                     type="submit"
+                    data-custom-cursor
                     disabled={status === "loading"}
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 0.97 }}
