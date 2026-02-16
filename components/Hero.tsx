@@ -50,7 +50,7 @@ export default function Hero() {
           fill
           priority
           sizes="100vw"
-          style={{ objectFit: "cover", objectPosition: "60% center" }}
+          style={{ objectFit: "cover", objectPosition: "60% center", transform: "scale(1.2)", transformOrigin: "60% center" }}
         />
       </div>
 
