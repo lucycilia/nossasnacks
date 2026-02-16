@@ -170,7 +170,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.42 }}
-            style={{ marginTop: "28px", width: "100%" }}
+            style={{ marginTop: "12px", width: "100%" }}
           >
             <AnimatePresence mode="wait">
               {status === "success" ? (
