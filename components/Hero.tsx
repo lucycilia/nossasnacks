@@ -203,9 +203,10 @@ export default function Hero() {
                     disabled={status === "loading"}
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 0.97 }}
-                    className="rounded-full px-7 py-3 text-white whitespace-nowrap disabled:opacity-60"
+                    className="rounded-full px-7 py-3 whitespace-nowrap disabled:opacity-60"
                     style={{
                       background: "#92F4E5",
+                      color: "#000000",
                       fontFamily: "'Poppins', system-ui, sans-serif",
                       fontWeight: 600,
                       fontSize: "16px",
