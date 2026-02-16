@@ -77,9 +77,9 @@ export default function Hero() {
           style={{
             borderRadius: "9999px",
             padding: "0px 24px",
-            background: "rgba(249, 239, 225, 0.1)",
-            backdropFilter: "blur(10px)",
-            WebkitBackdropFilter: "blur(10px)",
+            background: "rgba(0, 0, 0, 0.3)",
+            backdropFilter: "blur(20px)",
+            WebkitBackdropFilter: "blur(20px)",
           }}
         >
           <span
