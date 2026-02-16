@@ -1,19 +1,24 @@
 export default function Footer() {
   return (
-    <footer className="py-8 text-center text-sm text-muted">
-      <div className="mb-3 flex justify-center gap-6">
-        {/* Add your social links */}
-        <a href="https://instagram.com/nossasnacks" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
-          Instagram
-        </a>
-        <a href="https://tiktok.com/@nossasnacks" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
-          TikTok
+    <footer
+      className="py-8 text-center text-sm"
+      style={{ color: "rgba(201,169,122,0.7)", fontFamily: "Reigo, system-ui, sans-serif", fontWeight: 300 }}
+    >
+      <p className="text-base" style={{ color: "#C9A97A" }}>
+        Feito no Brasil com amor ❤️
+      </p>
+      <div className="mt-3 flex justify-center gap-6 text-xs">
+        <a
+          href="/privacy"
+          className="underline transition-colors"
+          style={{ color: "rgba(201,169,122,0.6)" }}
+        >
+          Política de Privacidade
         </a>
       </div>
-      <a href="/privacy" className="underline hover:text-foreground">
-        Política de Privacidade
-      </a>
-      <p className="mt-2">© {new Date().getFullYear()} Nossa Snacks. Todos os direitos reservados.</p>
+      <p className="mt-2 text-xs" style={{ color: "rgba(201,169,122,0.45)" }}>
+        © {new Date().getFullYear()} Nossa Snacks. Todos os direitos reservados.
+      </p>
     </footer>
   );
 }

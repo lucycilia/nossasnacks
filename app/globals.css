@@ -1,26 +1,98 @@
 @import "tailwindcss";
 
+/* ── Reigo font family ─────────────────────────────────── */
+@font-face {
+  font-family: "Reigo";
+  src: url("/Reigo-Light.woff2") format("woff2"),
+       url("/Reigo-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Reigo";
+  src: url("/Reigo-Regular.woff2") format("woff2"),
+       url("/Reigo-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Reigo";
+  src: url("/Reigo-Medium.woff2") format("woff2"),
+       url("/Reigo-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Reigo";
+  src: url("/Reigo-SemiBold.woff2") format("woff2"),
+       url("/Reigo-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Reigo";
+  src: url("/Reigo-Bold.woff2") format("woff2"),
+       url("/Reigo-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Reigo";
+  src: url("/Reigo-ExtraBold.woff2") format("woff2"),
+       url("/Reigo-ExtraBold.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Reigo";
+  src: url("/Reigo-Black.woff2") format("woff2"),
+       url("/Reigo-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Design tokens ────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #1a0e06;
+  --foreground: #fdf6ec;
+  --muted: #c9a97a;
+  --accent: #c0392b;
+  --accent-blue: #64c8e8;
+  --border: rgba(253, 246, 236, 0.2);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-blue: var(--accent-blue);
+  --color-border: var(--border);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Base ─────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Reigo", system-ui, sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
