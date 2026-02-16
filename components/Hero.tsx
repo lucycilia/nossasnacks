@@ -141,7 +141,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="mt-16 sm:mt-20 text-5xl sm:text-6xl lg:text-[4.5rem] leading-[1.1]"
+            className="mt-0 sm:mt-4 text-5xl sm:text-6xl lg:text-[4.5rem] leading-[1.1]"
             style={{ color: "#F9EFE1", fontFamily: "Reigo, system-ui, sans-serif", fontWeight: 300 }}
           >
             <span style={{ display: "block", whiteSpace: "nowrap" }}>
