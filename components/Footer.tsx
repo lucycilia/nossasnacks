@@ -2,7 +2,11 @@ export default function Footer() {
   return (
     <footer
       className="py-8 text-center text-sm"
-      style={{ color: "rgba(201,169,122,0.7)", fontFamily: "Reigo, system-ui, sans-serif", fontWeight: 300 }}
+      style={{
+        color: "rgba(201,169,122,0.7)",
+        fontFamily: "Reigo, system-ui, sans-serif",
+        fontWeight: 300,
+      }}
     >
       <p className="text-base" style={{ color: "#C9A97A" }}>
         Feito no Brasil com amor ❤️

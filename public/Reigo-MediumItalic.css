@@ -1,9 +1,10 @@
-/* Webfont: Reigo-MediumItalic */@font-face {
-    font-family: 'ReigoMed';
-    src: url('Reigo-MediumItalic.woff2') format('woff2'), /* Modern Browsers */
-         url('Reigo-MediumItalic.otf') format('opentype'); /* Safari, Android, iOS */
-             font-style: italic;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
+/* Webfont: Reigo-MediumItalic */
+@font-face {
+  font-family: "ReigoMed";
+  src:
+    url("Reigo-MediumItalic.woff2") format("woff2"),
+    /* Modern Browsers */ url("Reigo-MediumItalic.otf") format("opentype"); /* Safari, Android, iOS */
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
 }
-

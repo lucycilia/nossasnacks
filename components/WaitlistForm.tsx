@@ -7,7 +7,9 @@ export default function WaitlistForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [consent, setConsent] = useState(false);
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
   const [message, setMessage] = useState("");
 
   async function handleSubmit(e: React.FormEvent) {
@@ -32,7 +34,11 @@ export default function WaitlistForm() {
       setMessage("Obrigado! Você está na lista. Avisaremos em breve.");
     } catch (err: unknown) {
       setStatus("error");
-      setMessage(err instanceof Error ? err.message : "Algo deu errado. Tente novamente.");
+      setMessage(
+        err instanceof Error
+          ? err.message
+          : "Algo deu errado. Tente novamente.",
+      );
     }
   }
 
@@ -49,7 +55,10 @@ export default function WaitlistForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex w-full max-w-md flex-col gap-4">
+    <form
+      onSubmit={handleSubmit}
+      className="flex w-full max-w-md flex-col gap-4"
+    >
       <input
         type="text"
         placeholder="Seu nome"

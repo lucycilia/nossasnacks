@@ -15,7 +15,9 @@ const rotatingPhrases = [
 export default function Hero() {
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
   const [message, setMessage] = useState("");
   // null = not yet measured (avoids SSR/hydration mismatch)
   const [isMobile, setIsMobile] = useState<boolean | null>(null);
@@ -42,7 +44,11 @@ export default function Hero() {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, name: email.split("@")[0], consent: true }),
+        body: JSON.stringify({
+          email,
+          name: email.split("@")[0],
+          consent: true,
+        }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error);
@@ -62,8 +68,10 @@ export default function Hero() {
   /* ── MOBILE: two-section stacked layout ─────────────────────────────── */
   if (isMobile) {
     return (
-      <section className="flex flex-col overflow-hidden" style={{ minHeight: "100dvh" }}>
-
+      <section
+        className="flex flex-col overflow-hidden"
+        style={{ minHeight: "100dvh" }}
+      >
         {/* Section 1 — solid dark bg with all text content */}
         <div
           style={{
@@ -109,7 +117,13 @@ export default function Hero() {
               alignSelf: "center",
             }}
           >
-            <Image src="/Start-little-teal.svg" alt="" width={8} height={8} style={{ display: "block", flexShrink: 0 }} />
+            <Image
+              src="/Start-little-teal.svg"
+              alt=""
+              width={8}
+              height={8}
+              style={{ display: "block", flexShrink: 0 }}
+            />
             <span
               style={{
                 color: "#F9EFE1",
@@ -123,7 +137,13 @@ export default function Hero() {
             >
               EM JULHO 2026
             </span>
-            <Image src="/Start-little-teal.svg" alt="" width={8} height={8} style={{ display: "block", flexShrink: 0 }} />
+            <Image
+              src="/Start-little-teal.svg"
+              alt=""
+              width={8}
+              height={8}
+              style={{ display: "block", flexShrink: 0 }}
+            />
           </motion.div>
 
           {/* Headline */}
@@ -142,7 +162,16 @@ export default function Hero() {
             }}
           >
             <span style={{ display: "block" }}>Seu novo snack</span>
-            <span style={{ display: "flex", alignItems: "baseline", justifyContent: "center", flexWrap: "nowrap", gap: "0.3em", whiteSpace: "nowrap" }}>
+            <span
+              style={{
+                display: "flex",
+                alignItems: "baseline",
+                justifyContent: "center",
+                flexWrap: "nowrap",
+                gap: "0.3em",
+                whiteSpace: "nowrap",
+              }}
+            >
               <span>favorito.</span>
               <span style={{ display: "inline-grid", minWidth: "9ch" }}>
                 <AnimatePresence mode="wait">
@@ -152,7 +181,12 @@ export default function Hero() {
                     animate={{ opacity: 1, y: "0%" }}
                     exit={{ opacity: 0, y: "-40%" }}
                     transition={{ duration: 0.45, ease: "easeInOut" }}
-                    style={{ display: "block", fontWeight: 700, gridArea: "1 / 1", textAlign: "left" }}
+                    style={{
+                      display: "block",
+                      fontWeight: 700,
+                      gridArea: "1 / 1",
+                      textAlign: "left",
+                    }}
                   >
                     {rotatingPhrases[phraseIndex]}
                   </motion.span>
@@ -259,7 +293,15 @@ export default function Hero() {
             </AnimatePresence>
 
             {status === "error" && (
-              <p style={{ marginTop: "8px", fontSize: "14px", color: "#e87a6a", fontFamily: "'Poppins', system-ui, sans-serif", textAlign: "center" }}>
+              <p
+                style={{
+                  marginTop: "8px",
+                  fontSize: "14px",
+                  color: "#e87a6a",
+                  fontFamily: "'Poppins', system-ui, sans-serif",
+                  textAlign: "center",
+                }}
+              >
                 {message}
               </p>
             )}
@@ -312,7 +354,8 @@ export default function Hero() {
               left: 0,
               right: 0,
               height: "96px",
-              background: "linear-gradient(to bottom, #291918 0%, transparent 100%)",
+              background:
+                "linear-gradient(to bottom, #291918 0%, transparent 100%)",
               zIndex: 10,
               pointerEvents: "none",
             }}
@@ -356,7 +399,6 @@ export default function Hero() {
             Feito no Brasil com amor ❤️
           </p>
         </div>
-
       </section>
     );
   }
@@ -480,8 +522,10 @@ export default function Hero() {
         className="relative z-10 flex-1 flex flex-col items-start w-full"
         style={{ justifyContent: "center" }}
       >
-        <div className="flex flex-col items-start w-full" style={{ maxWidth: "580px" }}>
-
+        <div
+          className="flex flex-col items-start w-full"
+          style={{ maxWidth: "580px" }}
+        >
           {/* EM JULHO 2026 banner */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -502,7 +546,13 @@ export default function Hero() {
               boxSizing: "border-box",
             }}
           >
-            <Image src="/Start-little-teal.svg" alt="" width={8} height={8} style={{ display: "block", flexShrink: 0 }} />
+            <Image
+              src="/Start-little-teal.svg"
+              alt=""
+              width={8}
+              height={8}
+              style={{ display: "block", flexShrink: 0 }}
+            />
             <span
               style={{
                 color: "#F9EFE1",
@@ -517,7 +567,13 @@ export default function Hero() {
             >
               EM JULHO 2026
             </span>
-            <Image src="/Start-little-teal.svg" alt="" width={8} height={8} style={{ display: "block", flexShrink: 0 }} />
+            <Image
+              src="/Start-little-teal.svg"
+              alt=""
+              width={8}
+              height={8}
+              style={{ display: "block", flexShrink: 0 }}
+            />
           </motion.div>
 
           {/* Headline */}
@@ -537,7 +593,15 @@ export default function Hero() {
             <span style={{ display: "block", whiteSpace: "nowrap" }}>
               Seu novo snack
             </span>
-            <span style={{ display: "flex", alignItems: "baseline", flexWrap: "nowrap", gap: "0.3em", whiteSpace: "nowrap" }}>
+            <span
+              style={{
+                display: "flex",
+                alignItems: "baseline",
+                flexWrap: "nowrap",
+                gap: "0.3em",
+                whiteSpace: "nowrap",
+              }}
+            >
               <span>favorito.</span>
               <span style={{ display: "inline-grid", minWidth: "9ch" }}>
                 <AnimatePresence mode="wait">
@@ -547,7 +611,11 @@ export default function Hero() {
                     animate={{ opacity: 1, y: "0%" }}
                     exit={{ opacity: 0, y: "-40%" }}
                     transition={{ duration: 0.45, ease: "easeInOut" }}
-                    style={{ display: "block", fontWeight: 700, gridArea: "1 / 1" }}
+                    style={{
+                      display: "block",
+                      fontWeight: 700,
+                      gridArea: "1 / 1",
+                    }}
                   >
                     {rotatingPhrases[phraseIndex]}
                   </motion.span>
@@ -656,7 +724,14 @@ export default function Hero() {
             </AnimatePresence>
 
             {status === "error" && (
-              <p style={{ marginTop: "8px", fontSize: "14px", color: "#e87a6a", fontFamily: "'Poppins', system-ui, sans-serif" }}>
+              <p
+                style={{
+                  marginTop: "8px",
+                  fontSize: "14px",
+                  color: "#e87a6a",
+                  fontFamily: "'Poppins', system-ui, sans-serif",
+                }}
+              >
                 {message}
               </p>
             )}
