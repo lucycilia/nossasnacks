@@ -79,26 +79,17 @@ export default function Hero() {
         >
           {/* Nossa logo */}
           <div>
-            <div
+            <span
               style={{
-                display: "inline-block",
-                borderRadius: "9999px",
-                padding: "0px 16px",
-                background: "rgba(0,0,0,0.4)",
+                fontFamily: "Reigo, system-ui, sans-serif",
+                fontWeight: 900,
+                fontSize: "32px",
+                color: "#F9EFE1",
+                letterSpacing: "0.01em",
               }}
             >
-              <span
-                style={{
-                  fontFamily: "Reigo, system-ui, sans-serif",
-                  fontWeight: 900,
-                  fontSize: "32px",
-                  color: "#F9EFE1",
-                  letterSpacing: "0.01em",
-                }}
-              >
-                nossa
-              </span>
-            </div>
+              nossa
+            </span>
           </div>
 
           {/* Headline */}
@@ -357,27 +348,17 @@ export default function Hero() {
 
       {/* Header row: logo left */}
       <div className="relative z-10 flex">
-        <div
+        <span
           style={{
-            borderRadius: "9999px",
-            padding: "0px 24px",
-            background: "rgba(0, 0, 0, 0.3)",
-            backdropFilter: "blur(20px)",
-            WebkitBackdropFilter: "blur(20px)",
+            fontFamily: "Reigo, system-ui, sans-serif",
+            fontWeight: 900,
+            fontSize: "44px",
+            color: "#F9EFE1",
+            letterSpacing: "0.01em",
           }}
         >
-          <span
-            style={{
-              fontFamily: "Reigo, system-ui, sans-serif",
-              fontWeight: 900,
-              fontSize: "44px",
-              color: "#F9EFE1",
-              letterSpacing: "0.01em",
-            }}
-          >
-            nossa
-          </span>
-        </div>
+          nossa
+        </span>
       </div>
 
       {/* Red badge */}
