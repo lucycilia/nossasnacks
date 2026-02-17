@@ -304,8 +304,8 @@ export default function Hero() {
               height={240}
               sizes="22vw"
               style={{
-                width: "clamp(85px, 24vw, 150px)",
-                height: "clamp(85px, 24vw, 150px)",
+                width: "134px",
+                height: "134px",
                 filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))",
               }}
             />
