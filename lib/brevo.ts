@@ -29,10 +29,6 @@ export async function addSubscriber(params: SubscribeParams): Promise<void> {
       attributes: { FIRSTNAME: name },
       listIds: BREVO_LIST_ID ? [BREVO_LIST_ID] : [],
       updateEnabled: true,
-      extendedProperties: {
-        lgpdConsent: true,
-        lgpdConsentTimestamp: consentTimestamp,
-      },
     }),
   });
 
