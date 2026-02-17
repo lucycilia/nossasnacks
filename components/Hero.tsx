@@ -226,7 +226,7 @@ export default function Hero() {
                       border: "2px solid #F9EFE1",
                       color: "#F9EFE1",
                       fontFamily: "'Poppins', system-ui, sans-serif",
-                      fontWeight: 700,
+                      fontWeight: 400,
                       fontSize: "16px",
                     }}
                   />
@@ -617,7 +617,7 @@ export default function Hero() {
                       color: "#F9EFE1",
                       backdropFilter: "blur(8px)",
                       fontFamily: "'Poppins', system-ui, sans-serif",
-                      fontWeight: 700,
+                      fontWeight: 400,
                       fontSize: "16px",
                     }}
                   />
