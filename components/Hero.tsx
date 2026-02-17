@@ -389,7 +389,7 @@ export default function Hero() {
         style={{
           position: "absolute",
           top: "calc(clamp(140px, 20vh, 300px) + 24px)",
-          left: "24px",
+          right: "24px",
           zIndex: 20,
         }}
       >
