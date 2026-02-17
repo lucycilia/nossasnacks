@@ -84,7 +84,7 @@ export default function Hero() {
                 display: "inline-block",
                 borderRadius: "9999px",
                 padding: "8px 16px",
-                background: "rgba(255,255,255,0.08)",
+                background: "rgba(0,0,0,0.4)",
               }}
             >
               <span
@@ -144,7 +144,7 @@ export default function Hero() {
               marginTop: "20px",
               borderRadius: "14px",
               padding: "10px 16px",
-              background: "rgba(255,255,255,0.08)",
+              background: "rgba(0,0,0,0.4)",
               display: "inline-flex",
               width: "100%",
               boxSizing: "border-box",
