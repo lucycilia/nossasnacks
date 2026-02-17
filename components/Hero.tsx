@@ -103,7 +103,7 @@ export default function Hero() {
               padding: "10px 16px",
               background: "rgba(0,0,0,0.4)",
               display: "inline-flex",
-              width: "100%",
+              width: "fit-content",
               boxSizing: "border-box",
             }}
           >
@@ -167,7 +167,7 @@ export default function Hero() {
               padding: "10px 16px",
               background: "rgba(0,0,0,0.4)",
               display: "inline-flex",
-              width: "100%",
+              width: "fit-content",
               boxSizing: "border-box",
             }}
           >
