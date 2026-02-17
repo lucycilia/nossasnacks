@@ -83,7 +83,7 @@ export default function Hero() {
               style={{
                 display: "inline-block",
                 borderRadius: "9999px",
-                padding: "2px 16px",
+                padding: "0px 16px",
                 background: "rgba(0,0,0,0.4)",
               }}
             >
@@ -360,7 +360,7 @@ export default function Hero() {
         <div
           style={{
             borderRadius: "9999px",
-            padding: "2px 24px",
+            padding: "0px 24px",
             background: "rgba(0, 0, 0, 0.3)",
             backdropFilter: "blur(20px)",
             WebkitBackdropFilter: "blur(20px)",
