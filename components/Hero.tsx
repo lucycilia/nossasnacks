@@ -111,7 +111,7 @@ export default function Hero() {
               alignSelf: "center",
             }}
           >
-            <Image src="/star-teal.svg" alt="" width={8} height={8} style={{ display: "block", flexShrink: 0 }} />
+            <Image src="/Start-little-teal.svg" alt="" width={8} height={8} style={{ display: "block", flexShrink: 0 }} />
             <span
               style={{
                 color: "#F9EFE1",
@@ -125,7 +125,7 @@ export default function Hero() {
             >
               EM JULHO 2026
             </span>
-            <Image src="/star-teal.svg" alt="" width={8} height={8} style={{ display: "block", flexShrink: 0 }} />
+            <Image src="/Start-little-teal.svg" alt="" width={8} height={8} style={{ display: "block", flexShrink: 0 }} />
           </motion.div>
 
           {/* Headline */}
@@ -504,7 +504,7 @@ export default function Hero() {
               boxSizing: "border-box",
             }}
           >
-            <Image src="/star-teal.svg" alt="" width={8} height={8} style={{ display: "block", flexShrink: 0 }} />
+            <Image src="/Start-little-teal.svg" alt="" width={8} height={8} style={{ display: "block", flexShrink: 0 }} />
             <span
               style={{
                 color: "#F9EFE1",
@@ -519,7 +519,7 @@ export default function Hero() {
             >
               EM JULHO 2026
             </span>
-            <Image src="/star-teal.svg" alt="" width={8} height={8} style={{ display: "block", flexShrink: 0 }} />
+            <Image src="/Start-little-teal.svg" alt="" width={8} height={8} style={{ display: "block", flexShrink: 0 }} />
           </motion.div>
 
           {/* Headline */}
