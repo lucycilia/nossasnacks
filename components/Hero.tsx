@@ -275,6 +275,19 @@ export default function Hero() {
             }}
           />
 
+          {/* Gradient fade from section 1 into image */}
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              height: "96px",
+              background: "linear-gradient(to bottom, #291918 0%, transparent 100%)",
+              zIndex: 10,
+              pointerEvents: "none",
+            }}
+          />
 
           {/* Blue badge — upper left of image */}
           <motion.div
