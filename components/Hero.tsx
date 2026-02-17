@@ -183,14 +183,14 @@ export default function Hero() {
               style={{
                 color: "#F9EFE1",
                 fontFamily: "'Poppins', system-ui, sans-serif",
-                fontWeight: 700,
+                fontWeight: 500,
                 fontSize: "14px",
                 letterSpacing: "0.06em",
                 lineHeight: 1.4,
                 display: "block",
               }}
             >
-              PRIMEIROS 500 GANHAM DESCONTO
+              Primeiros 500 ganham 10% desconto
             </span>
           </motion.div>
 
@@ -579,7 +579,7 @@ export default function Hero() {
               style={{
                 color: "#F9EFE1",
                 fontFamily: "'Poppins', system-ui, sans-serif",
-                fontWeight: 700,
+                fontWeight: 500,
                 fontSize: "16px",
                 letterSpacing: "0.1em",
                 whiteSpace: "nowrap",
@@ -587,7 +587,7 @@ export default function Hero() {
                 display: "block",
               }}
             >
-              LOTE LIMITADO&nbsp;•&nbsp;PRIMEIROS 500 GANHAM DESCONTO
+              Lote limitado&nbsp;•&nbsp;Primeiros 500 ganham 10% desconto
             </span>
           </motion.div>
 
