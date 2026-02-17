@@ -270,7 +270,7 @@ export default function Hero() {
             style={{
               objectFit: "cover",
               objectPosition: "75% 35%",
-              transform: "scale(1.9) translateY(-39px)",
+              transform: "scale(1.615) translateY(-39px)",
               transformOrigin: "75% 35%",
             }}
           />
