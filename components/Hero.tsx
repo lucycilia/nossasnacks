@@ -275,32 +275,6 @@ export default function Hero() {
             }}
           />
 
-          {/* Red badge — lower right of image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.7 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.9, duration: 0.5, type: "spring" }}
-            style={{ position: "absolute", bottom: "calc(8% + 100px)", right: "4%", zIndex: 20 }}
-          >
-            <motion.div
-              data-custom-cursor
-              animate={{ rotate: 360 }}
-              transition={{ duration: 28, ease: "linear", repeat: Infinity }}
-            >
-              <Image
-                src="/badge-red.png"
-                alt="Toooooda natural"
-                width={224}
-                height={224}
-                sizes="20vw"
-                style={{
-                  width: "clamp(80px, 22vw, 140px)",
-                  height: "clamp(80px, 22vw, 140px)",
-                  filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))",
-                }}
-              />
-            </motion.div>
-          </motion.div>
 
           {/* Blue badge — upper left of image */}
           <motion.div
