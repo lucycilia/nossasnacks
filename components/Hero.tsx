@@ -12,15 +12,7 @@ const rotatingPhrases = [
   "100% vegano.",
 ];
 
-type Flavor = "cranberry" | "coco";
-
-const flavorConfig = {
-  cranberry: { label: "Cranberry", accentColor: "#D91E29" },
-  coco:      { label: "Coco",      accentColor: "#D4A853" },
-};
-
 export default function Hero() {
-  const [flavor, setFlavor] = useState<Flavor>("cranberry");
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [email, setEmail] = useState("");
   const [isMobile, setIsMobile] = useState(false);
