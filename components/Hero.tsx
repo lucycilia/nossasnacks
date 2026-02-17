@@ -388,8 +388,8 @@ export default function Hero() {
         transition={{ delay: 0.8, duration: 0.5, type: "spring" }}
         style={{
           position: "absolute",
-          top: "calc(clamp(140px, 20vh, 300px) + 24px)",
-          right: "24px",
+          top: "calc(clamp(140px, 20vh, 300px) + 36px)",
+          right: "36px",
           zIndex: 20,
         }}
       >
