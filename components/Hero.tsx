@@ -139,7 +139,7 @@ export default function Hero() {
               fontWeight: 300,
               fontSize: "clamp(1.7rem, 7.8vw, 2.3rem)",
               lineHeight: 1.15,
-              marginTop: "clamp(20px, 8vw, 44px)",
+              marginTop: "8px",
               textAlign: "center",
             }}
           >
@@ -169,7 +169,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
             style={{
-              marginTop: "20px",
+              marginTop: "24px",
               borderRadius: "14px",
               padding: "10px 16px",
               background: "rgba(0,0,0,0.4)",
@@ -199,7 +199,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.42 }}
-            style={{ marginTop: "32px", width: "100%" }}
+            style={{ marginTop: "24px", width: "100%" }}
           >
             <AnimatePresence mode="wait">
               {status === "success" ? (
@@ -221,7 +221,7 @@ export default function Hero() {
                 <motion.form
                   key="form"
                   onSubmit={handleSubmit}
-                  className="flex flex-col gap-3 w-full"
+                  className="flex flex-col gap-2 w-full"
                 >
                   <input
                     type="email"
