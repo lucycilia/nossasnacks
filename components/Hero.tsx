@@ -64,7 +64,7 @@ export default function Hero() {
   /* ── MOBILE: two-section stacked layout ─────────────────────────────── */
   if (isMobile) {
     return (
-      <section className="flex flex-col overflow-hidden" style={{ minHeight: "100svh", minHeight: "100dvh" }}>
+      <section className="flex flex-col overflow-hidden" style={{ minHeight: "100dvh" }}>
 
         {/* Section 1 — solid dark bg with all text content */}
         <div
