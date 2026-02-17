@@ -92,6 +92,36 @@ export default function Hero() {
             </span>
           </div>
 
+          {/* EM JULHO 2026 banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            style={{
+              marginTop: "20px",
+              borderRadius: "14px",
+              padding: "10px 16px",
+              background: "rgba(0,0,0,0.4)",
+              display: "inline-flex",
+              width: "100%",
+              boxSizing: "border-box",
+            }}
+          >
+            <span
+              style={{
+                color: "#F9EFE1",
+                fontFamily: "'Poppins', system-ui, sans-serif",
+                fontWeight: 700,
+                fontSize: "14px",
+                letterSpacing: "0.06em",
+                lineHeight: 1.4,
+                display: "block",
+              }}
+            >
+              EM JULHO 2026
+            </span>
+          </motion.div>
+
           {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -152,7 +182,7 @@ export default function Hero() {
                 display: "block",
               }}
             >
-              JULHO&nbsp;•&nbsp;PRIMEIROS 500 GANHAM DESCONTO
+              PRIMEIROS 500 GANHAM DESCONTO
             </span>
           </motion.div>
 
@@ -444,6 +474,39 @@ export default function Hero() {
       >
         <div className="flex flex-col items-start w-full" style={{ maxWidth: "580px" }}>
 
+          {/* EM JULHO 2026 banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            style={{
+              marginBottom: "20px",
+              borderRadius: "9999px",
+              padding: "12px 28px",
+              background: "rgba(0, 0, 0, 0.3)",
+              backdropFilter: "blur(20px)",
+              WebkitBackdropFilter: "blur(20px)",
+              display: "inline-flex",
+              width: "fit-content",
+              boxSizing: "border-box",
+            }}
+          >
+            <span
+              style={{
+                color: "#F9EFE1",
+                fontFamily: "'Poppins', system-ui, sans-serif",
+                fontWeight: 700,
+                fontSize: "16px",
+                letterSpacing: "0.1em",
+                whiteSpace: "nowrap",
+                lineHeight: 1.4,
+                display: "block",
+              }}
+            >
+              EM JULHO 2026
+            </span>
+          </motion.div>
+
           {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -509,7 +572,7 @@ export default function Hero() {
                 display: "block",
               }}
             >
-              LOTE LIMITADO&nbsp;•&nbsp;JULHO&nbsp;•&nbsp;PRIMEIROS 500 GANHAM DESCONTO
+              LOTE LIMITADO&nbsp;•&nbsp;PRIMEIROS 500 GANHAM DESCONTO
             </span>
           </motion.div>
 
