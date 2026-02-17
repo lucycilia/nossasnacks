@@ -14,7 +14,11 @@ export async function addSubscriber(params: SubscribeParams): Promise<void> {
 
   // Mock mode — activate by setting BREVO_API_KEY in .env.local
   if (!BREVO_API_KEY) {
-    console.log("[Brevo mock] Would subscribe:", { email, name, consentTimestamp });
+    console.log("[Brevo mock] Would subscribe:", {
+      email,
+      name,
+      consentTimestamp,
+    });
     return;
   }
 

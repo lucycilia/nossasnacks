@@ -3,8 +3,9 @@
 /* ── Reigo font family ─────────────────────────────────── */
 @font-face {
   font-family: "Reigo";
-  src: url("/Reigo-Light.woff2") format("woff2"),
-       url("/Reigo-Light.otf") format("opentype");
+  src:
+    url("/Reigo-Light.woff2") format("woff2"),
+    url("/Reigo-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -12,8 +13,9 @@
 
 @font-face {
   font-family: "Reigo";
-  src: url("/Reigo-Regular.woff2") format("woff2"),
-       url("/Reigo-Regular.otf") format("opentype");
+  src:
+    url("/Reigo-Regular.woff2") format("woff2"),
+    url("/Reigo-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -21,8 +23,9 @@
 
 @font-face {
   font-family: "Reigo";
-  src: url("/Reigo-Medium.woff2") format("woff2"),
-       url("/Reigo-Medium.otf") format("opentype");
+  src:
+    url("/Reigo-Medium.woff2") format("woff2"),
+    url("/Reigo-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -30,8 +33,9 @@
 
 @font-face {
   font-family: "Reigo";
-  src: url("/Reigo-SemiBold.woff2") format("woff2"),
-       url("/Reigo-SemiBold.otf") format("opentype");
+  src:
+    url("/Reigo-SemiBold.woff2") format("woff2"),
+    url("/Reigo-SemiBold.otf") format("opentype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -39,8 +43,9 @@
 
 @font-face {
   font-family: "Reigo";
-  src: url("/Reigo-Bold.woff2") format("woff2"),
-       url("/Reigo-Bold.otf") format("opentype");
+  src:
+    url("/Reigo-Bold.woff2") format("woff2"),
+    url("/Reigo-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -48,8 +53,9 @@
 
 @font-face {
   font-family: "Reigo";
-  src: url("/Reigo-ExtraBold.woff2") format("woff2"),
-       url("/Reigo-ExtraBold.otf") format("opentype");
+  src:
+    url("/Reigo-ExtraBold.woff2") format("woff2"),
+    url("/Reigo-ExtraBold.otf") format("opentype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -57,8 +63,9 @@
 
 @font-face {
   font-family: "Reigo";
-  src: url("/Reigo-Black.woff2") format("woff2"),
-       url("/Reigo-Black.otf") format("opentype");
+  src:
+    url("/Reigo-Black.woff2") format("woff2"),
+    url("/Reigo-Black.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -81,11 +88,12 @@
   --color-accent: var(--accent);
   --color-accent-blue: var(--accent-blue);
   --color-border: var(--border);
-
 }
 
 /* ── Base ─────────────────────────────────────────────── */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -99,6 +107,6 @@ body {
 }
 
 input::placeholder {
-  color: #F9EFE1;
+  color: #f9efe1;
   opacity: 1;
 }
