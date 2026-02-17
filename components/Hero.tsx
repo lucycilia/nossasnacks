@@ -139,20 +139,22 @@ export default function Hero() {
             }}
           >
             <span style={{ display: "block" }}>Seu novo snack</span>
-            <span style={{ display: "block" }}>favorito.</span>
-            <span style={{ display: "inline-grid" }}>
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={phraseIndex}
-                  initial={{ opacity: 0, y: "40%" }}
-                  animate={{ opacity: 1, y: "0%" }}
-                  exit={{ opacity: 0, y: "-40%" }}
-                  transition={{ duration: 0.45, ease: "easeInOut" }}
-                  style={{ display: "block", fontWeight: 700, gridArea: "1 / 1" }}
-                >
-                  {rotatingPhrases[phraseIndex]}
-                </motion.span>
-              </AnimatePresence>
+            <span style={{ display: "flex", alignItems: "baseline", justifyContent: "center", flexWrap: "nowrap", gap: "0.3em", whiteSpace: "nowrap" }}>
+              <span>favorito.</span>
+              <span style={{ display: "inline-grid", minWidth: "9ch" }}>
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={phraseIndex}
+                    initial={{ opacity: 0, y: "40%" }}
+                    animate={{ opacity: 1, y: "0%" }}
+                    exit={{ opacity: 0, y: "-40%" }}
+                    transition={{ duration: 0.45, ease: "easeInOut" }}
+                    style={{ display: "block", fontWeight: 700, gridArea: "1 / 1", textAlign: "left" }}
+                  >
+                    {rotatingPhrases[phraseIndex]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
             </span>
           </motion.h1>
 
