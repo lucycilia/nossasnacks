@@ -97,3 +97,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+input::placeholder {
+  color: #F9EFE1;
+  opacity: 1;
+}
