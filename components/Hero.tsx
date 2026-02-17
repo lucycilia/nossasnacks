@@ -105,6 +105,7 @@ export default function Hero() {
               display: "inline-flex",
               width: "fit-content",
               boxSizing: "border-box",
+              alignSelf: "center",
             }}
           >
             <span
@@ -134,10 +135,11 @@ export default function Hero() {
               fontSize: "clamp(1.7rem, 7.8vw, 2.3rem)",
               lineHeight: 1.15,
               marginTop: "clamp(20px, 8vw, 44px)",
+              textAlign: "center",
             }}
           >
             <span style={{ display: "block" }}>Seu novo snack</span>
-            <span style={{ display: "flex", alignItems: "baseline", flexWrap: "nowrap", gap: "0.3em", whiteSpace: "nowrap" }}>
+            <span style={{ display: "flex", alignItems: "baseline", justifyContent: "center", flexWrap: "nowrap", gap: "0.3em", whiteSpace: "nowrap" }}>
               <span>favorito.</span>
               <span style={{ display: "inline-grid", minWidth: "9ch" }}>
                 <AnimatePresence mode="wait">
@@ -169,6 +171,7 @@ export default function Hero() {
               display: "inline-flex",
               width: "fit-content",
               boxSizing: "border-box",
+              alignSelf: "center",
             }}
           >
             <span
@@ -204,6 +207,7 @@ export default function Hero() {
                     fontFamily: "'Poppins', system-ui, sans-serif",
                     fontWeight: 400,
                     fontSize: "18px",
+                    textAlign: "center",
                   }}
                 >
                   {message}
@@ -252,7 +256,7 @@ export default function Hero() {
             </AnimatePresence>
 
             {status === "error" && (
-              <p style={{ marginTop: "8px", fontSize: "14px", color: "#e87a6a", fontFamily: "'Poppins', system-ui, sans-serif" }}>
+              <p style={{ marginTop: "8px", fontSize: "14px", color: "#e87a6a", fontFamily: "'Poppins', system-ui, sans-serif", textAlign: "center" }}>
                 {message}
               </p>
             )}
@@ -265,6 +269,7 @@ export default function Hero() {
                 fontStyle: "italic",
                 fontFamily: "'Poppins', system-ui, sans-serif",
                 fontWeight: 400,
+                textAlign: "center",
               }}
             >
               Sem spam. Apenas novidades deliciosas.
