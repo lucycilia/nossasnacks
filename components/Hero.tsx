@@ -15,7 +15,10 @@ const rotatingPhrases = [
 export default function Hero() {
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [email, setEmail] = useState("");
-  const [isMobile, setIsMobile] = useState(false);
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [message, setMessage] = useState("");
+  // null = not yet measured (avoids SSR/hydration mismatch)
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
 
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768);
@@ -30,8 +33,6 @@ export default function Hero() {
     }, 2500);
     return () => clearInterval(interval);
   }, []);
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [message, setMessage] = useState("");
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -51,6 +52,11 @@ export default function Hero() {
       setStatus("error");
       setMessage("Algo deu errado. Tente novamente.");
     }
+  }
+
+  /* ── Pre-mount: consistent placeholder prevents SSR hydration mismatch ─ */
+  if (isMobile === null) {
+    return <section style={{ minHeight: "100dvh", background: "#291918" }} />;
   }
 
   /* ── MOBILE: two-section stacked layout ─────────────────────────────── */

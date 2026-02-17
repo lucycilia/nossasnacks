@@ -49,6 +49,11 @@ export default function CustomCursor() {
 
   return (
     <motion.div
+      animate={{
+        opacity: visible ? 1 : 0,
+        scale: visible ? 1 : 0.4,
+      }}
+      transition={{ opacity: { duration: 0.18 }, scale: { duration: 0.18 } }}
       style={{
         position: "fixed",
         top: 0,
@@ -62,10 +67,7 @@ export default function CustomCursor() {
         zIndex: 9999,
         x,
         y,
-        opacity: visible ? 1 : 0,
-        scale: visible ? 1 : 0.4,
       }}
-      transition={{ opacity: { duration: 0.18 }, scale: { duration: 0.18 } }}
     />
   );
 }
