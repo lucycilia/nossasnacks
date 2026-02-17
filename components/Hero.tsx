@@ -102,12 +102,16 @@ export default function Hero() {
               borderRadius: "14px",
               padding: "10px 16px",
               background: "rgba(0,0,0,0.4)",
+              border: "1px solid #34201F",
               display: "inline-flex",
+              alignItems: "center",
+              gap: "6px",
               width: "fit-content",
               boxSizing: "border-box",
               alignSelf: "center",
             }}
           >
+            <Image src="/star-teal.svg" alt="" width={8} height={8} style={{ display: "block", flexShrink: 0 }} />
             <span
               style={{
                 color: "#F9EFE1",
@@ -121,6 +125,7 @@ export default function Hero() {
             >
               EM JULHO 2026
             </span>
+            <Image src="/star-teal.svg" alt="" width={8} height={8} style={{ display: "block", flexShrink: 0 }} />
           </motion.div>
 
           {/* Headline */}
@@ -491,11 +496,15 @@ export default function Hero() {
               background: "rgba(0, 0, 0, 0.3)",
               backdropFilter: "blur(20px)",
               WebkitBackdropFilter: "blur(20px)",
+              border: "1px solid #34201F",
               display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
               width: "fit-content",
               boxSizing: "border-box",
             }}
           >
+            <Image src="/star-teal.svg" alt="" width={8} height={8} style={{ display: "block", flexShrink: 0 }} />
             <span
               style={{
                 color: "#F9EFE1",
@@ -510,6 +519,7 @@ export default function Hero() {
             >
               EM JULHO 2026
             </span>
+            <Image src="/star-teal.svg" alt="" width={8} height={8} style={{ display: "block", flexShrink: 0 }} />
           </motion.div>
 
           {/* Headline */}
