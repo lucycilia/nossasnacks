@@ -64,17 +64,17 @@ export default function Hero() {
   /* ── MOBILE: two-section stacked layout ─────────────────────────────── */
   if (isMobile) {
     return (
-      <section className="flex flex-col overflow-hidden" style={{ minHeight: "100svh" }}>
+      <section className="flex flex-col overflow-hidden" style={{ minHeight: "100svh", minHeight: "100dvh" }}>
 
         {/* Section 1 — solid dark bg with all text content */}
         <div
           style={{
             background: "#291918",
-            padding: "24px 20px 32px",
+            padding: "clamp(16px, 5vw, 32px) 20px clamp(20px, 5vw, 36px)",
             display: "flex",
             flexDirection: "column",
-            flex: "0 0 60vh",
-            minHeight: 0,
+            flex: "1 1 58%",
+            minHeight: "min(60vh, 420px)",
           }}
         >
           {/* Nossa logo */}
@@ -110,9 +110,9 @@ export default function Hero() {
               color: "#F9EFE1",
               fontFamily: "Reigo, system-ui, sans-serif",
               fontWeight: 300,
-              fontSize: "clamp(1.85rem, 7.8vw, 2.3rem)",
+              fontSize: "clamp(1.7rem, 7.8vw, 2.3rem)",
               lineHeight: 1.15,
-              marginTop: "44px",
+              marginTop: "clamp(20px, 8vw, 44px)",
             }}
           >
             <span style={{ display: "block" }}>Seu novo snack</span>
@@ -254,7 +254,8 @@ export default function Hero() {
         {/* Section 2 — product image */}
         <div
           style={{
-            flex: "0 0 40vh",
+            flex: "1 1 42%",
+            minHeight: "min(40vh, 280px)",
             position: "relative",
             overflow: "hidden",
             background: "#1a0f0e",
@@ -348,7 +349,7 @@ export default function Hero() {
   return (
     <section
       className="relative min-h-screen flex flex-col overflow-hidden"
-      style={{ padding: "48px" }}
+      style={{ padding: "clamp(24px, 4vw, 64px)" }}
     >
       {/* Background image */}
       <div className="absolute inset-0 z-0">
@@ -455,13 +456,13 @@ export default function Hero() {
       <p
         style={{
           position: "absolute",
-          bottom: 40,
-          left: 48,
+          bottom: "clamp(20px, 3vw, 48px)",
+          left: "clamp(24px, 4vw, 64px)",
           zIndex: 10,
           color: "#F9EFE1",
           fontFamily: "'Poppins', system-ui, sans-serif",
           fontWeight: 400,
-          fontSize: "14px",
+          fontSize: "clamp(11px, 1.2vw, 14px)",
         }}
       >
         Feito no Brasil com amor ❤️
