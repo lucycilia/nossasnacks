@@ -53,6 +53,12 @@ BREVO_LIST_ID=your_list_id_here
 
 When `BREVO_API_KEY` is missing, the API route runs in mock mode (logs to console instead of calling Brevo).
 
+## Repository Etiquette
+
+### Git Workflow
+- When creating a new branch, always push it to GitHub immediately with the original branch name
+- After each meaningful set of changes, push to the remote branch so Vercel previews stay current
+
 ## Key Conventions
 
 - **Language:** All user-facing text is in Brazilian Portuguese.
