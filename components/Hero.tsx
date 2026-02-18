@@ -367,7 +367,7 @@ export default function Hero() {
             initial={{ opacity: 0, rotate: -15, scale: 0.7 }}
             animate={{ opacity: 1, rotate: -10, scale: 1 }}
             transition={{ delay: 0.75, duration: 0.5, type: "spring" }}
-            style={{ position: "absolute", top: "6%", left: "4%", zIndex: 20 }}
+            style={{ position: "absolute", top: "calc(6% + 12px)", left: "calc(4% + 88px)", zIndex: 20 }}
           >
             <Image
               src="/badge-blue.png"
@@ -441,39 +441,6 @@ export default function Hero() {
         </span>
       </div>
 
-      {/* Red badge */}
-      <motion.div
-        className="hidden lg:block"
-        initial={{ opacity: 0, scale: 0.7 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.8, duration: 0.5, type: "spring" }}
-        style={{
-          position: "absolute",
-          top: "calc(clamp(140px, 20vh, 300px) + 36px)",
-          right: "36px",
-          zIndex: 20,
-        }}
-      >
-        <motion.div
-          data-custom-cursor
-          animate={{ rotate: 360 }}
-          transition={{ duration: 28, ease: "linear", repeat: Infinity }}
-        >
-          <Image
-            src="/badge-red.png"
-            alt="Toooooda natural"
-            width={224}
-            height={224}
-            sizes="16vw"
-            style={{
-              width: "clamp(110px, 15.6vw, 224px)",
-              height: "clamp(110px, 15.6vw, 224px)",
-              filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))",
-            }}
-          />
-        </motion.div>
-      </motion.div>
-
       {/* Blue badge */}
       <motion.div
         data-custom-cursor
@@ -482,8 +449,8 @@ export default function Hero() {
         transition={{ delay: 0.65, duration: 0.5, type: "spring" }}
         style={{
           position: "absolute",
-          top: "clamp(110px, 16.5vh, 238px)",
-          right: "clamp(80px, 31vw, 448px)",
+          top: "calc(clamp(110px, 16.5vh, 238px) + 12px)",
+          right: "calc(clamp(80px, 31vw, 448px) - 88px)",
           zIndex: 20,
         }}
       >
