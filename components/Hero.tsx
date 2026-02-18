@@ -371,7 +371,7 @@ export default function Hero() {
           >
             <motion.div
               animate={{ rotate: 360 }}
-              transition={{ duration: 20, ease: "linear", repeat: Infinity }}
+              transition={{ duration: 40, ease: "linear", repeat: Infinity }}
             >
               <Image
                 src="/badge-blue.png"
@@ -461,7 +461,7 @@ export default function Hero() {
       >
         <motion.div
           animate={{ rotate: 360 }}
-          transition={{ duration: 20, ease: "linear", repeat: Infinity }}
+          transition={{ duration: 40, ease: "linear", repeat: Infinity }}
         >
           <Image
             src="/badge-blue.png"
