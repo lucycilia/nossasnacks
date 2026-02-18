@@ -367,20 +367,25 @@ export default function Hero() {
             initial={{ opacity: 0, rotate: -15, scale: 0.7 }}
             animate={{ opacity: 1, rotate: -10, scale: 1 }}
             transition={{ delay: 0.75, duration: 0.5, type: "spring" }}
-            style={{ position: "absolute", top: "calc(6% + 12px)", left: "calc(4% + 24px)", zIndex: 20 }}
+            style={{ position: "absolute", top: "calc(6% + 12px)", left: "calc(4% + 88px)", zIndex: 20 }}
           >
-            <Image
-              src="/badge-blue.png"
-              alt="seu snack do bem"
-              width={240}
-              height={240}
-              sizes="22vw"
-              style={{
-                width: "134px",
-                height: "134px",
-                filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))",
-              }}
-            />
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, ease: "linear", repeat: Infinity }}
+            >
+              <Image
+                src="/badge-blue.png"
+                alt="seu snack do bem"
+                width={240}
+                height={240}
+                sizes="22vw"
+                style={{
+                  width: "134px",
+                  height: "134px",
+                  filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))",
+                }}
+              />
+            </motion.div>
           </motion.div>
 
           {/* Bottom label */}
@@ -450,22 +455,27 @@ export default function Hero() {
         style={{
           position: "absolute",
           top: "calc(clamp(110px, 16.5vh, 238px) + 12px)",
-          right: "calc(clamp(80px, 31vw, 448px) - 24px)",
+          right: "calc(clamp(80px, 31vw, 448px) - 88px)",
           zIndex: 20,
         }}
       >
-        <Image
-          src="/badge-blue.png"
-          alt="seu snack do bem"
-          width={240}
-          height={240}
-          sizes="17vw"
-          style={{
-            width: "clamp(120px, 16.7vw, 240px)",
-            height: "clamp(120px, 16.7vw, 240px)",
-            filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))",
-          }}
-        />
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ duration: 20, ease: "linear", repeat: Infinity }}
+        >
+          <Image
+            src="/badge-blue.png"
+            alt="seu snack do bem"
+            width={240}
+            height={240}
+            sizes="17vw"
+            style={{
+              width: "clamp(120px, 16.7vw, 240px)",
+              height: "clamp(120px, 16.7vw, 240px)",
+              filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))",
+            }}
+          />
+        </motion.div>
       </motion.div>
 
       {/* Bottom-left tag */}
