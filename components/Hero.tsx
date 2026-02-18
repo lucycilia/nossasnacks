@@ -369,23 +369,18 @@ export default function Hero() {
             transition={{ delay: 0.75, duration: 0.5, type: "spring" }}
             style={{ position: "absolute", top: "calc(6% + 12px)", left: "calc(4% + 88px)", zIndex: 20 }}
           >
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 40, ease: "linear", repeat: Infinity }}
-            >
-              <Image
-                src="/badge-blue.png"
-                alt="seu snack do bem"
-                width={240}
-                height={240}
-                sizes="22vw"
-                style={{
-                  width: "134px",
-                  height: "134px",
-                  filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))",
-                }}
-              />
-            </motion.div>
+            <Image
+              src="/badge-blue.png"
+              alt="seu snack do bem"
+              width={240}
+              height={240}
+              sizes="22vw"
+              style={{
+                width: "134px",
+                height: "134px",
+                filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))",
+              }}
+            />
           </motion.div>
 
           {/* Bottom label */}
@@ -459,23 +454,18 @@ export default function Hero() {
           zIndex: 20,
         }}
       >
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 40, ease: "linear", repeat: Infinity }}
-        >
-          <Image
-            src="/badge-blue.png"
-            alt="seu snack do bem"
-            width={240}
-            height={240}
-            sizes="17vw"
-            style={{
-              width: "clamp(120px, 16.7vw, 240px)",
-              height: "clamp(120px, 16.7vw, 240px)",
-              filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))",
-            }}
-          />
-        </motion.div>
+        <Image
+          src="/badge-blue.png"
+          alt="seu snack do bem"
+          width={240}
+          height={240}
+          sizes="17vw"
+          style={{
+            width: "clamp(120px, 16.7vw, 240px)",
+            height: "clamp(120px, 16.7vw, 240px)",
+            filter: "drop-shadow(0 4px 16px rgba(0,0,0,0.5))",
+          }}
+        />
       </motion.div>
 
       {/* Bottom-left tag */}
