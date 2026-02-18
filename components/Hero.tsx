@@ -367,7 +367,7 @@ export default function Hero() {
             initial={{ opacity: 0, rotate: -15, scale: 0.7 }}
             animate={{ opacity: 1, rotate: -10, scale: 1 }}
             transition={{ delay: 0.75, duration: 0.5, type: "spring" }}
-            style={{ position: "absolute", top: "6%", left: "4%", zIndex: 20 }}
+            style={{ position: "absolute", top: "calc(6% + 12px)", left: "calc(4% + 24px)", zIndex: 20 }}
           >
             <Image
               src="/badge-blue.png"
@@ -449,8 +449,8 @@ export default function Hero() {
         transition={{ delay: 0.65, duration: 0.5, type: "spring" }}
         style={{
           position: "absolute",
-          top: "clamp(110px, 16.5vh, 238px)",
-          right: "clamp(80px, 31vw, 448px)",
+          top: "calc(clamp(110px, 16.5vh, 238px) + 12px)",
+          right: "calc(clamp(80px, 31vw, 448px) - 24px)",
           zIndex: 20,
         }}
       >
