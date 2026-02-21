@@ -1,7 +1,25 @@
-const BREVO_API_KEY = process.env.BREVO_API_KEY;
-const BREVO_LIST_ID = process.env.BREVO_LIST_ID
-  ? parseInt(process.env.BREVO_LIST_ID)
+const BREVO_API_KEY = process.env.BREVO_API_KEY?.trim();
+
+const _rawListId = process.env.BREVO_LIST_ID
+  ? parseInt(process.env.BREVO_LIST_ID, 10)
   : undefined;
+if (_rawListId !== undefined && isNaN(_rawListId)) {
+  console.warn(
+    "[Brevo] BREVO_LIST_ID is set but not a valid integer:",
+    process.env.BREVO_LIST_ID,
+  );
+}
+const BREVO_LIST_ID =
+  _rawListId !== undefined && !isNaN(_rawListId) ? _rawListId : undefined;
+
+if (BREVO_API_KEY) {
+  console.log(
+    "[Brevo] Live mode. List ID:",
+    BREVO_LIST_ID ?? "(none — contact added without list assignment)",
+  );
+} else {
+  console.log("[Brevo] Mock mode — set BREVO_API_KEY to go live.");
+}
 
 export interface SubscribeParams {
   email: string;
