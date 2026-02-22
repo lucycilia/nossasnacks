@@ -110,10 +110,10 @@ export default function Footer() {
         </div>
         <p
           style={{
-            color: "rgba(249,239,225,0.45)",
+            color: "rgba(249,239,225,0.65)",
             fontFamily: "'Poppins', system-ui, sans-serif",
             fontWeight: 400,
-            fontSize: "12px",
+            fontSize: "20px",
             margin: 0,
           }}
         >
