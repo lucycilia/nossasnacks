@@ -1,101 +1,86 @@
-import Image from "next/image";
 import Link from "next/link";
+import FooterEmailForm from "./FooterEmailForm";
 
 export default function Footer() {
   return (
     <footer
       style={{
         background: "#1a0e06",
-        borderTop: "1px solid rgba(201,169,122,0.15)",
-        paddingTop: "clamp(40px, 6vw, 64px)",
-        paddingBottom: "clamp(28px, 4vw, 48px)",
+        paddingTop: "clamp(40px, 6vw, 72px)",
         paddingLeft: "clamp(20px, 5vw, 64px)",
         paddingRight: "clamp(20px, 5vw, 64px)",
+        paddingBottom: "clamp(24px, 3vw, 40px)",
       }}
     >
-      {/* Top row: brand + tagline left, links right */}
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "space-between",
-          alignItems: "flex-start",
-          gap: "32px",
-        }}
-      >
-        {/* Brand block */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-          <span
-            style={{
-              fontFamily: "Reigo, system-ui, sans-serif",
-              fontWeight: 900,
-              fontSize: "clamp(28px, 4vw, 40px)",
-              color: "#F9EFE1",
-              letterSpacing: "0.01em",
-              lineHeight: 1,
-            }}
-          >
-            nossa
-          </span>
-
-          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-            <Image
-              src="/Start-little-teal.svg"
-              alt=""
-              width={8}
-              height={8}
-              style={{ flexShrink: 0 }}
-            />
-            <span
-              style={{
-                fontFamily: "'Poppins', system-ui, sans-serif",
-                fontWeight: 400,
-                fontSize: "clamp(13px, 1.5vw, 15px)",
-                color: "rgba(201,169,122,0.8)",
-                lineHeight: 1.5,
-              }}
-            >
-              Snacks do bem, feitos no Brasil.
-            </span>
-          </div>
-        </div>
-
-        {/* Links block */}
-        <nav
-          aria-label="Rodapé"
-          style={{ display: "flex", flexDirection: "column", gap: "12px" }}
-        >
-          <span
+      {/* ── Top: two columns ──────────────────────────────── */}
+      <div className="footer-top">
+        {/* Column 1 — Email signup */}
+        <div className="footer-col">
+          <h2 className="footer-col-heading">Está quase saindo do forno</h2>
+          <p
             style={{
               fontFamily: "'Poppins', system-ui, sans-serif",
-              fontWeight: 600,
-              fontSize: "11px",
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
-              color: "rgba(201,169,122,0.5)",
+              fontWeight: 400,
+              fontSize: "clamp(13px, 1.4vw, 15px)",
+              color: "#F9EFE1",
+              margin: "0 0 20px 0",
             }}
           >
-            Links
-          </span>
-          <Link href="/privacy" className="footer-nav-link">
-            Política de Privacidade
-          </Link>
-        </nav>
+            Lote limitado&nbsp;•&nbsp;Primeiros 500 ganham 10% desconto
+          </p>
+          <FooterEmailForm />
+        </div>
+
+        {/* Vertical divider (hidden on mobile) */}
+        <div className="footer-vdivider" />
+
+        {/* Column 2 — Help */}
+        <div className="footer-col">
+          <h2 className="footer-col-heading">Precisa de ajuda?</h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+            <a href="#" className="footer-pill-btn">
+              Perguntas frequentes
+            </a>
+            <Link href="/privacy" className="footer-pill-btn">
+              Política de privacidade
+            </Link>
+          </div>
+        </div>
       </div>
 
-      {/* Divider */}
+      {/* ── Wordmark ──────────────────────────────────────── */}
       <div
         style={{
-          marginTop: "clamp(28px, 4vw, 48px)",
-          height: "1px",
-          background: "rgba(201,169,122,0.12)",
+          marginTop: "clamp(36px, 5vw, 60px)",
+          borderTop: "1px solid rgba(249,239,225,0.12)",
+          paddingTop: "clamp(4px, 1vw, 12px)",
+          overflow: "hidden",
+          lineHeight: 0.85,
         }}
+      >
+        <span
+          style={{
+            fontFamily: "'Fraunces', 'Reigo', serif",
+            fontWeight: 900,
+            fontSize: "clamp(100px, 19vw, 288px)",
+            color: "#F9EFE1",
+            letterSpacing: "-0.02em",
+            display: "block",
+            textAlign: "center",
+            lineHeight: 0.85,
+          }}
+        >
+          nossa
+        </span>
+      </div>
+      <div
+        style={{ borderTop: "1px solid rgba(249,239,225,0.12)", marginTop: 0 }}
       />
 
-      {/* Bottom row */}
+      {/* ── Bottom bar ────────────────────────────────────── */}
       <div
         style={{
-          marginTop: "20px",
+          marginTop: "clamp(14px, 2vw, 24px)",
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "space-between",
@@ -103,28 +88,27 @@ export default function Footer() {
           gap: "8px",
         }}
       >
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
+          <a href="mailto:contato@nossasnacks.com" className="footer-bottom-link">
+            contato@nossasnacks.com
+          </a>
+          <a href="#" className="footer-bottom-link">
+            Instagram
+          </a>
+          <a href="#" className="footer-bottom-link">
+            Tik Tok
+          </a>
+        </div>
         <p
           style={{
+            color: "rgba(249,239,225,0.45)",
             fontFamily: "'Poppins', system-ui, sans-serif",
             fontWeight: 400,
             fontSize: "12px",
-            color: "rgba(201,169,122,0.45)",
             margin: 0,
           }}
         >
-          © {new Date().getFullYear()} Nossa Snacks. Todos os direitos
-          reservados.
-        </p>
-        <p
-          style={{
-            fontFamily: "'Poppins', system-ui, sans-serif",
-            fontWeight: 400,
-            fontSize: "12px",
-            color: "rgba(201,169,122,0.45)",
-            margin: 0,
-          }}
-        >
-          Feito no Brasil com amor ❤️
+          © 2026 nossa snacks
         </p>
       </div>
     </footer>
