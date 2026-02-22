@@ -97,7 +97,12 @@ export default function Footer() {
           <a href="mailto:contato@nossasnacks.com" className="footer-bottom-link">
             contato@nossasnacks.com
           </a>
-          <a href="#" className="footer-bottom-link">
+          <a
+            href="https://www.instagram.com/nossa.snacks/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-bottom-link"
+          >
             Instagram
           </a>
           <a href="#" className="footer-bottom-link">
