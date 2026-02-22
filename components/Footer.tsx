@@ -52,8 +52,6 @@ export default function Footer() {
       <div
         style={{
           marginTop: "clamp(36px, 5vw, 60px)",
-          marginLeft: "calc(-1 * clamp(20px, 5vw, 64px))",
-          marginRight: "calc(-1 * clamp(20px, 5vw, 64px))",
         }}
       >
         <div style={{ height: "2px", background: "#F9EFE1", borderRadius: "9999px" }} />
