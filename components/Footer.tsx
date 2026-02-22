@@ -6,12 +6,12 @@ export default function Footer() {
     <footer
       style={{
         background: [
-          /* rust-red glow pulled from photo — #7A3221 */
-          "radial-gradient(ellipse 140% 30% at 50% 0%, rgba(122,50,33,0.55) 0%, transparent 70%)",
-          /* secondary glow shifted left for depth */
-          "radial-gradient(ellipse 70% 20% at 12% 0%, rgba(122,50,33,0.3) 0%, transparent 65%)",
-          /* dark-brown band at the very top — #261B19 → base */
-          "linear-gradient(to bottom, #261B19 0%, #1a0e06 30%)",
+          /* warm rust glow from photo — starts 8% down so it never touches the top edge */
+          "radial-gradient(ellipse 130% 50% at 50% 8%, rgba(122,50,33,0.38) 0%, transparent 70%)",
+          /* secondary blush left side, same offset */
+          "radial-gradient(ellipse 65% 35% at 10% 8%, rgba(122,50,33,0.22) 0%, transparent 65%)",
+          /* top-edge matches photo bottom (#261B19) → fades to base over ~22% of height */
+          "linear-gradient(to bottom, #261B19 0%, #1a0e06 22%)",
           /* solid base */
           "#1a0e06",
         ].join(", "),

@@ -361,21 +361,6 @@ export default function Hero() {
             }}
           />
 
-          {/* Bottom gradient — fades into footer */}
-          <div
-            style={{
-              position: "absolute",
-              bottom: 0,
-              left: 0,
-              right: 0,
-              height: "100px",
-              background:
-                "linear-gradient(to bottom, transparent 0%, rgba(122,50,33,0.4) 30%, #261B19 70%, #1a0e06 100%)",
-              zIndex: 9,
-              pointerEvents: "none",
-            }}
-          />
-
           {/* Blue badge — upper left of image */}
           <motion.div
             data-custom-cursor
@@ -498,21 +483,6 @@ export default function Hero() {
       >
         Feito no Brasil com amor ❤️
       </p>
-
-      {/* Bottom gradient — fades hero image into footer */}
-      <div
-        style={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          height: "clamp(140px, 24vh, 280px)",
-          background:
-            "linear-gradient(to bottom, transparent 0%, rgba(122,50,33,0.35) 35%, #261B19 65%, #1a0e06 100%)",
-          zIndex: 5,
-          pointerEvents: "none",
-        }}
-      />
 
       {/* Main content */}
       <div
