@@ -48,34 +48,39 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* ── Wordmark ──────────────────────────────────────── */}
+      {/* ── Wordmark (full-bleed) ─────────────────────────── */}
       <div
         style={{
           marginTop: "clamp(36px, 5vw, 60px)",
-          borderTop: "1px solid rgba(249,239,225,0.12)",
-          paddingTop: "clamp(4px, 1vw, 12px)",
-          overflow: "hidden",
-          lineHeight: 0.85,
+          marginLeft: "calc(-1 * clamp(20px, 5vw, 64px))",
+          marginRight: "calc(-1 * clamp(20px, 5vw, 64px))",
         }}
       >
-        <span
+        <div style={{ borderTop: "1px solid rgba(249,239,225,0.12)" }} />
+        <div
           style={{
-            fontFamily: "'Fraunces', 'Reigo', serif",
-            fontWeight: 900,
-            fontSize: "clamp(100px, 19vw, 288px)",
-            color: "#F9EFE1",
-            letterSpacing: "-0.02em",
-            display: "block",
-            textAlign: "center",
+            overflow: "hidden",
+            padding: "clamp(2px, 0.8vw, 10px) 0",
             lineHeight: 0.85,
           }}
         >
-          nossa
-        </span>
+          <span
+            style={{
+              fontFamily: "Reigo, system-ui, sans-serif",
+              fontWeight: 700,
+              fontSize: "clamp(120px, 35vw, 500px)",
+              color: "#F9EFE1",
+              letterSpacing: "-0.02em",
+              display: "block",
+              textAlign: "center",
+              lineHeight: 0.85,
+            }}
+          >
+            nossa
+          </span>
+        </div>
+        <div style={{ borderTop: "1px solid rgba(249,239,225,0.12)" }} />
       </div>
-      <div
-        style={{ borderTop: "1px solid rgba(249,239,225,0.12)", marginTop: 0 }}
-      />
 
       {/* ── Bottom bar ────────────────────────────────────── */}
       <div
