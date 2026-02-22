@@ -68,6 +68,7 @@ export default function FooterEmailForm() {
             <button
               type="submit"
               disabled={status === "loading"}
+              data-custom-cursor
               className="footer-cta-btn"
             >
               {status === "loading" ? "Enviando…" : "Eu quero!"}
