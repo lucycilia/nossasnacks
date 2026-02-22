@@ -135,6 +135,11 @@ input::placeholder {
   margin: 0 clamp(24px, 4vw, 56px);
 }
 
+/* Makes children able to use cqw units relative to the footer content width */
+.wordmark-container {
+  container-type: inline-size;
+}
+
 .footer-col-heading {
   font-family: "Reigo", system-ui, sans-serif;
   font-weight: 700;

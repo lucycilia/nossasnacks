@@ -50,6 +50,7 @@ export default function Footer() {
 
       {/* ── Wordmark (full-bleed) ─────────────────────────── */}
       <div
+        className="wordmark-container"
         style={{
           marginTop: "clamp(36px, 5vw, 60px)",
         }}
@@ -66,7 +67,7 @@ export default function Footer() {
             style={{
               fontFamily: "Reigo, system-ui, sans-serif",
               fontWeight: 700,
-              fontSize: "clamp(200px, 43vw, 620px)",
+              fontSize: "42cqw",
               color: "#F9EFE1",
               letterSpacing: "-0.02em",
               display: "block",
