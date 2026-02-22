@@ -5,7 +5,14 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: "#1a0e06",
+        background: [
+          /* warm amber glow centred at the top — mirrors hero image tones */
+          "radial-gradient(ellipse 130% 35% at 50% 0%, rgba(100,42,14,0.55) 0%, transparent 70%)",
+          /* secondary warm blush shifted left */
+          "radial-gradient(ellipse 70% 25% at 10% 0%, rgba(130,50,18,0.3) 0%, transparent 65%)",
+          /* solid base */
+          "#1a0e06",
+        ].join(", "),
         paddingTop: "clamp(40px, 6vw, 72px)",
         paddingLeft: "clamp(20px, 5vw, 64px)",
         paddingRight: "clamp(20px, 5vw, 64px)",
