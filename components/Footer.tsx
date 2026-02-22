@@ -59,7 +59,7 @@ export default function Footer() {
         <div
           style={{
             overflow: "hidden",
-            padding: "clamp(8px, 2vw, 28px) 0",
+            padding: "clamp(4px, 1vw, 14px) 0",
             lineHeight: 0.85,
           }}
         >
