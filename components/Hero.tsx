@@ -370,7 +370,7 @@ export default function Hero() {
               right: 0,
               height: "100px",
               background:
-                "linear-gradient(to bottom, transparent 0%, #1a0e06 100%)",
+                "linear-gradient(to bottom, transparent 0%, rgba(122,50,33,0.4) 30%, #261B19 70%, #1a0e06 100%)",
               zIndex: 9,
               pointerEvents: "none",
             }}
@@ -508,7 +508,7 @@ export default function Hero() {
           right: 0,
           height: "clamp(140px, 24vh, 280px)",
           background:
-            "linear-gradient(to bottom, transparent 0%, rgba(26,14,6,0.55) 50%, #1a0e06 100%)",
+            "linear-gradient(to bottom, transparent 0%, rgba(122,50,33,0.35) 35%, #261B19 65%, #1a0e06 100%)",
           zIndex: 5,
           pointerEvents: "none",
         }}

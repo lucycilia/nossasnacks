@@ -6,10 +6,12 @@ export default function Footer() {
     <footer
       style={{
         background: [
-          /* warm amber glow centred at the top — mirrors hero image tones */
-          "radial-gradient(ellipse 130% 35% at 50% 0%, rgba(100,42,14,0.55) 0%, transparent 70%)",
-          /* secondary warm blush shifted left */
-          "radial-gradient(ellipse 70% 25% at 10% 0%, rgba(130,50,18,0.3) 0%, transparent 65%)",
+          /* rust-red glow pulled from photo — #7A3221 */
+          "radial-gradient(ellipse 140% 30% at 50% 0%, rgba(122,50,33,0.55) 0%, transparent 70%)",
+          /* secondary glow shifted left for depth */
+          "radial-gradient(ellipse 70% 20% at 12% 0%, rgba(122,50,33,0.3) 0%, transparent 65%)",
+          /* dark-brown band at the very top — #261B19 → base */
+          "linear-gradient(to bottom, #261B19 0%, #1a0e06 30%)",
           /* solid base */
           "#1a0e06",
         ].join(", "),
