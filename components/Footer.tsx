@@ -1,28 +1,132 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer
-      className="py-8 text-center text-sm"
       style={{
-        color: "rgba(201,169,122,0.7)",
-        fontFamily: "Reigo, system-ui, sans-serif",
-        fontWeight: 300,
+        background: "#1a0e06",
+        borderTop: "1px solid rgba(201,169,122,0.15)",
+        paddingTop: "clamp(40px, 6vw, 64px)",
+        paddingBottom: "clamp(28px, 4vw, 48px)",
+        paddingLeft: "clamp(20px, 5vw, 64px)",
+        paddingRight: "clamp(20px, 5vw, 64px)",
       }}
     >
-      <p className="text-base" style={{ color: "#C9A97A" }}>
-        Feito no Brasil com amor ❤️
-      </p>
-      <div className="mt-3 flex justify-center gap-6 text-xs">
-        <a
-          href="/privacy"
-          className="underline transition-colors"
-          style={{ color: "rgba(201,169,122,0.6)" }}
+      {/* Top row: brand + tagline left, links right */}
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-between",
+          alignItems: "flex-start",
+          gap: "32px",
+        }}
+      >
+        {/* Brand block */}
+        <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+          <span
+            style={{
+              fontFamily: "Reigo, system-ui, sans-serif",
+              fontWeight: 900,
+              fontSize: "clamp(28px, 4vw, 40px)",
+              color: "#F9EFE1",
+              letterSpacing: "0.01em",
+              lineHeight: 1,
+            }}
+          >
+            nossa
+          </span>
+
+          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <Image
+              src="/Start-little-teal.svg"
+              alt=""
+              width={8}
+              height={8}
+              style={{ flexShrink: 0 }}
+            />
+            <span
+              style={{
+                fontFamily: "'Poppins', system-ui, sans-serif",
+                fontWeight: 400,
+                fontSize: "clamp(13px, 1.5vw, 15px)",
+                color: "rgba(201,169,122,0.8)",
+                lineHeight: 1.5,
+              }}
+            >
+              Snacks do bem, feitos no Brasil.
+            </span>
+          </div>
+        </div>
+
+        {/* Links block */}
+        <nav
+          aria-label="Rodapé"
+          style={{ display: "flex", flexDirection: "column", gap: "12px" }}
         >
-          Política de Privacidade
-        </a>
+          <span
+            style={{
+              fontFamily: "'Poppins', system-ui, sans-serif",
+              fontWeight: 600,
+              fontSize: "11px",
+              letterSpacing: "0.12em",
+              textTransform: "uppercase",
+              color: "rgba(201,169,122,0.5)",
+            }}
+          >
+            Links
+          </span>
+          <Link href="/privacy" className="footer-nav-link">
+            Política de Privacidade
+          </Link>
+        </nav>
       </div>
-      <p className="mt-2 text-xs" style={{ color: "rgba(201,169,122,0.45)" }}>
-        © {new Date().getFullYear()} Nossa Snacks. Todos os direitos reservados.
-      </p>
+
+      {/* Divider */}
+      <div
+        style={{
+          marginTop: "clamp(28px, 4vw, 48px)",
+          height: "1px",
+          background: "rgba(201,169,122,0.12)",
+        }}
+      />
+
+      {/* Bottom row */}
+      <div
+        style={{
+          marginTop: "20px",
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: "8px",
+        }}
+      >
+        <p
+          style={{
+            fontFamily: "'Poppins', system-ui, sans-serif",
+            fontWeight: 400,
+            fontSize: "12px",
+            color: "rgba(201,169,122,0.45)",
+            margin: 0,
+          }}
+        >
+          © {new Date().getFullYear()} Nossa Snacks. Todos os direitos
+          reservados.
+        </p>
+        <p
+          style={{
+            fontFamily: "'Poppins', system-ui, sans-serif",
+            fontWeight: 400,
+            fontSize: "12px",
+            color: "rgba(201,169,122,0.45)",
+            margin: 0,
+          }}
+        >
+          Feito no Brasil com amor ❤️
+        </p>
+      </div>
     </footer>
   );
 }
