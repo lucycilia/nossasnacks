@@ -67,7 +67,7 @@ export default function Footer() {
             style={{
               fontFamily: "Reigo, system-ui, sans-serif",
               fontWeight: 700,
-              fontSize: "42cqw",
+              fontSize: "38cqw",
               color: "#F9EFE1",
               letterSpacing: "-0.02em",
               display: "block",
