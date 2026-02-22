@@ -5,16 +5,7 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: [
-          /* warm rust glow from photo — starts 8% down so it never touches the top edge */
-          "radial-gradient(ellipse 130% 50% at 50% 8%, rgba(122,50,33,0.38) 0%, transparent 70%)",
-          /* secondary blush left side, same offset */
-          "radial-gradient(ellipse 65% 35% at 10% 8%, rgba(122,50,33,0.22) 0%, transparent 65%)",
-          /* top-edge matches photo bottom (#261B19) → fades to base over ~22% of height */
-          "linear-gradient(to bottom, #261B19 0%, #1a0e06 22%)",
-          /* solid base */
-          "#1a0e06",
-        ].join(", "),
+        background: "#261B19",
         paddingTop: "clamp(40px, 6vw, 72px)",
         paddingLeft: "clamp(20px, 5vw, 64px)",
         paddingRight: "clamp(20px, 5vw, 64px)",
