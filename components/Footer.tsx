@@ -56,7 +56,7 @@ export default function Footer() {
           marginRight: "calc(-1 * clamp(20px, 5vw, 64px))",
         }}
       >
-        <div style={{ borderTop: "1px solid rgba(249,239,225,0.12)" }} />
+        <div style={{ height: "2px", background: "#F9EFE1", borderRadius: "9999px" }} />
         <div
           style={{
             overflow: "hidden",
@@ -79,7 +79,7 @@ export default function Footer() {
             nossa
           </span>
         </div>
-        <div style={{ borderTop: "1px solid rgba(249,239,225,0.12)" }} />
+        <div style={{ height: "2px", background: "#F9EFE1", borderRadius: "9999px" }} />
       </div>
 
       {/* ── Bottom bar ────────────────────────────────────── */}

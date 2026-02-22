@@ -128,9 +128,10 @@ input::placeholder {
 }
 
 .footer-vdivider {
-  width: 1px;
+  width: 2px;
   align-self: stretch;
-  background: rgba(249, 239, 225, 0.15);
+  background: #F9EFE1;
+  border-radius: 9999px;
   margin: 0 clamp(24px, 4vw, 56px);
 }
 
