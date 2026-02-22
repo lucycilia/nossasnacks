@@ -261,11 +261,9 @@ export default function Hero() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="flex-1 rounded-full px-5 py-3 outline-none"
+                    className="flex-1 rounded-full px-5 py-3 outline-none hero-email-input"
                     style={{
                       background: "#271818",
-                      border: "2px solid #F9EFE1",
-                      color: "#F9EFE1",
                       fontFamily: "'Poppins', system-ui, sans-serif",
                       fontWeight: 400,
                       fontSize: "16px",
@@ -283,7 +281,7 @@ export default function Hero() {
                       color: "#000000",
                       fontFamily: "'Poppins', system-ui, sans-serif",
                       fontWeight: 600,
-                      fontSize: "16px",
+                      fontSize: "20px",
                     }}
                   >
                     {status === "loading" ? "Enviando…" : "Eu quero!"}
@@ -658,11 +656,9 @@ export default function Hero() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="flex-1 rounded-full px-5 py-3 outline-none"
+                    className="flex-1 rounded-full px-5 py-3 outline-none hero-email-input"
                     style={{
                       background: "#271818",
-                      border: "2px solid #F9EFE1",
-                      color: "#F9EFE1",
                       backdropFilter: "blur(8px)",
                       fontFamily: "'Poppins', system-ui, sans-serif",
                       fontWeight: 400,
@@ -681,7 +677,7 @@ export default function Hero() {
                       color: "#000000",
                       fontFamily: "'Poppins', system-ui, sans-serif",
                       fontWeight: 600,
-                      fontSize: "16px",
+                      fontSize: "20px",
                     }}
                   >
                     {status === "loading" ? "Enviando…" : "Eu quero!"}
