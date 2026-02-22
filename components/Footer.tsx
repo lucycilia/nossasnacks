@@ -37,7 +37,7 @@ export default function Footer() {
         {/* Column 2 — Help */}
         <div className="footer-col">
           <h2 className="footer-col-heading">Precisa de ajuda?</h2>
-          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "12px", alignItems: "flex-end" }}>
             <a href="#" className="footer-pill-btn">
               Perguntas frequentes
             </a>

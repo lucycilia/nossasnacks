@@ -124,7 +124,8 @@ input::placeholder {
 
 .footer-col + .footer-vdivider + .footer-col {
   padding-right: 0;
-  padding-left: 0;
+  padding-left: 195px;
+  text-align: right;
 }
 
 .footer-vdivider {
@@ -132,7 +133,7 @@ input::placeholder {
   align-self: stretch;
   background: #F9EFE1;
   border-radius: 9999px;
-  margin: 0 clamp(24px, 4vw, 56px);
+  margin: 0 0 0 clamp(24px, 4vw, 56px);
 }
 
 /* Makes children able to use cqw units relative to the footer content width */
@@ -143,7 +144,7 @@ input::placeholder {
 .footer-col-heading {
   font-family: "Reigo", system-ui, sans-serif;
   font-weight: 700;
-  font-size: clamp(17px, 2.2vw, 22px);
+  font-size: 32px;
   color: #92f4e5;
   margin: 0 0 14px 0;
 }
@@ -243,5 +244,10 @@ input::placeholder {
   .footer-col {
     padding-right: 0;
     padding-bottom: clamp(28px, 5vw, 40px);
+  }
+
+  .footer-col + .footer-vdivider + .footer-col {
+    padding-left: 0;
+    text-align: left;
   }
 }
